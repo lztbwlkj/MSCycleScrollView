@@ -21,7 +21,7 @@ spec.homepage     = "https://github.com/lztbwlkj/MSCycleScrollView.git"
 spec.license      = "MIT"
 spec.author             = { "lztbwlkj" => "lztbwlkj@gmail.com" }
 
-spec.platform     = :ios
+spec.platform     = :ios,"8.0"
 
 spec.source       = { :git => "https://github.com/lztbwlkj/MSCycleScrollView.git", :tag => "#{spec.version}" }
 
