@@ -319,6 +319,7 @@ NSString * const ID = @"MSCycleScrollViewCell";
             [temp addObject:urlString];
         }
     }];
+    
     self.imagePathsGroup = [temp copy];
     
     [self.mainView reloadData];
@@ -374,6 +375,8 @@ NSString * const ID = @"MSCycleScrollViewCell";
 {
     if (_pageControl) [_pageControl removeFromSuperview]; // 重新加载数据时调整
 
+    if (!self.showPageControl) return;
+    
     if (self.imagePathsGroup.count == 0 || self.onlyDisplayText) return;
 
     if ((self.imagePathsGroup.count == 1) && self.hidesForSinglePage) return;
