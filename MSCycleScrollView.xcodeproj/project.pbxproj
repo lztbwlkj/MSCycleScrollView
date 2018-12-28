@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88EF12C421D5BBBF0043CE5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12C321D5BBBF0043CE5A /* AppDelegate.m */; };
+		88EF12C721D5BBBF0043CE5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12C621D5BBBF0043CE5A /* ViewController.m */; };
+		88EF12CA21D5BBBF0043CE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12C821D5BBBF0043CE5A /* Main.storyboard */; };
+		88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CB21D5BBC50043CE5A /* Assets.xcassets */; };
+		88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */; };
+		88EF12D221D5BBC50043CE5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12D121D5BBC50043CE5A /* main.m */; };
+		88EF12DD21D5BBE70043CE5A /* MSAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */; };
+		88EF12DE21D5BBE70043CE5A /* MSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12DA21D5BBE70043CE5A /* MSPageControl.m */; };
+		88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */; };
+		88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */; };
+		88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */; };
+		88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */; };
+		88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */; };
+		88EF12F521D5FC270043CE5A /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12F421D5FC270043CE5A /* TestView.m */; };
+		88EF130121D611160043CE5A /* pageControlDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F721D611160043CE5A /* pageControlDot@2x.png */; };
+		88EF130221D611160043CE5A /* pageControlCurrentDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */; };
+		88EF130321D611160043CE5A /* 005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F921D611160043CE5A /* 005.jpg */; };
+		88EF130421D611160043CE5A /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FA21D611160043CE5A /* h3.jpg */; };
+		88EF130521D611160043CE5A /* pageControlCurrentDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */; };
+		88EF130621D611160043CE5A /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FC21D611160043CE5A /* h1.jpg */; };
+		88EF130721D611160043CE5A /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FD21D611160043CE5A /* h2.jpg */; };
+		88EF130821D611160043CE5A /* h4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FE21D611160043CE5A /* h4.jpg */; };
+		88EF130921D611160043CE5A /* pageControlDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FF21D611160043CE5A /* pageControlDot@3x.png */; };
+		88EF130A21D611160043CE5A /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF130021D611160043CE5A /* placeholder@2x.png */; };
+		C2EE8BF437CB100D5D1A6268 /* libPods-MSCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02AD4E59D6F3708B27831FB0 /* Pods-MSCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.release.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		88EF12BF21D5BBBF0043CE5A /* MSCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88EF12C221D5BBBF0043CE5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88EF12C321D5BBBF0043CE5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88EF12C521D5BBBF0043CE5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		88EF12C621D5BBBF0043CE5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88EF12C921D5BBBF0043CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88EF12CB21D5BBC50043CE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88EF12CE21D5BBC50043CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88EF12D021D5BBC50043CE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88EF12D121D5BBC50043CE5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAnimatedDotView.m; sourceTree = "<group>"; };
+		88EF12DA21D5BBE70043CE5A /* MSPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPageControl.m; sourceTree = "<group>"; };
+		88EF12DB21D5BBE70043CE5A /* MSPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPageControl.h; sourceTree = "<group>"; };
+		88EF12DC21D5BBE70043CE5A /* MSAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAnimatedDotView.h; sourceTree = "<group>"; };
+		88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCycleScrollView.h; sourceTree = "<group>"; };
+		88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCycleScrollView.m; sourceTree = "<group>"; };
+		88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCell.h; sourceTree = "<group>"; };
+		88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionViewCell.m; sourceTree = "<group>"; };
+		88EF12EA21D5BD6A0043CE5A /* UIView+MSExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MSExtension.h"; sourceTree = "<group>"; };
+		88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
+		88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSExampleDotView.h; sourceTree = "<group>"; };
+		88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSExampleDotView.m; sourceTree = "<group>"; };
+		88EF12F321D5FC270043CE5A /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		88EF12F421D5FC270043CE5A /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		88EF12F721D611160043CE5A /* pageControlDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@2x.png"; sourceTree = "<group>"; };
+		88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@2x.png"; sourceTree = "<group>"; };
+		88EF12F921D611160043CE5A /* 005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpg; sourceTree = "<group>"; };
+		88EF12FA21D611160043CE5A /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
+		88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@3x.png"; sourceTree = "<group>"; };
+		88EF12FC21D611160043CE5A /* h1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h1.jpg; sourceTree = "<group>"; };
+		88EF12FD21D611160043CE5A /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
+		88EF12FE21D611160043CE5A /* h4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h4.jpg; sourceTree = "<group>"; };
+		88EF12FF21D611160043CE5A /* pageControlDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@3x.png"; sourceTree = "<group>"; };
+		88EF130021D611160043CE5A /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88EF12BC21D5BBBF0043CE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2EE8BF437CB100D5D1A6268 /* libPods-MSCycleScrollView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88EF12B621D5BBBF0043CE5A = {
+			isa = PBXGroup;
+			children = (
+				88EF12C121D5BBBF0043CE5A /* MSCycleScrollView */,
+				88EF12C021D5BBBF0043CE5A /* Products */,
+				EDD5BBADA517CA051F70E2C3 /* Pods */,
+				FEDDC5E7D7B0CD87D82A175F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		88EF12C021D5BBBF0043CE5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12BF21D5BBBF0043CE5A /* MSCycleScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88EF12C121D5BBBF0043CE5A /* MSCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12F621D6110A0043CE5A /* Resuouce */,
+				88EF12E021D5BC0F0043CE5A /* Lib */,
+				88EF12C221D5BBBF0043CE5A /* AppDelegate.h */,
+				88EF12C321D5BBBF0043CE5A /* AppDelegate.m */,
+				88EF12C521D5BBBF0043CE5A /* ViewController.h */,
+				88EF12C621D5BBBF0043CE5A /* ViewController.m */,
+				88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */,
+				88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */,
+				88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */,
+				88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */,
+				88EF12F321D5FC270043CE5A /* TestView.h */,
+				88EF12F421D5FC270043CE5A /* TestView.m */,
+				88EF12C821D5BBBF0043CE5A /* Main.storyboard */,
+				88EF12CB21D5BBC50043CE5A /* Assets.xcassets */,
+				88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */,
+				88EF12D021D5BBC50043CE5A /* Info.plist */,
+				88EF12D121D5BBC50043CE5A /* main.m */,
+			);
+			path = MSCycleScrollView;
+			sourceTree = "<group>";
+		};
+		88EF12D821D5BBD40043CE5A /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12DC21D5BBE70043CE5A /* MSAnimatedDotView.h */,
+				88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */,
+				88EF12DB21D5BBE70043CE5A /* MSPageControl.h */,
+				88EF12DA21D5BBE70043CE5A /* MSPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		88EF12DF21D5BBFD0043CE5A /* MSCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */,
+				88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */,
+				88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */,
+				88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */,
+				88EF12EA21D5BD6A0043CE5A /* UIView+MSExtension.h */,
+				88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */,
+			);
+			path = MSCycleScrollView;
+			sourceTree = "<group>";
+		};
+		88EF12E021D5BC0F0043CE5A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12D821D5BBD40043CE5A /* PageControl */,
+				88EF12DF21D5BBFD0043CE5A /* MSCycleScrollView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		88EF12F621D6110A0043CE5A /* Resuouce */ = {
+			isa = PBXGroup;
+			children = (
+				88EF12F921D611160043CE5A /* 005.jpg */,
+				88EF12FC21D611160043CE5A /* h1.jpg */,
+				88EF12FD21D611160043CE5A /* h2.jpg */,
+				88EF12FA21D611160043CE5A /* h3.jpg */,
+				88EF12FE21D611160043CE5A /* h4.jpg */,
+				88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */,
+				88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */,
+				88EF12F721D611160043CE5A /* pageControlDot@2x.png */,
+				88EF12FF21D611160043CE5A /* pageControlDot@3x.png */,
+				88EF130021D611160043CE5A /* placeholder@2x.png */,
+			);
+			path = Resuouce;
+			sourceTree = "<group>";
+		};
+		EDD5BBADA517CA051F70E2C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */,
+				02AD4E59D6F3708B27831FB0 /* Pods-MSCycleScrollView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEDDC5E7D7B0CD87D82A175F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88EF12BE21D5BBBF0043CE5A /* MSCycleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88EF12D521D5BBC50043CE5A /* Build configuration list for PBXNativeTarget "MSCycleScrollView" */;
+			buildPhases = (
+				5DB52064DFEA57AF74A33EF8 /* [CP] Check Pods Manifest.lock */,
+				88EF12BB21D5BBBF0043CE5A /* Sources */,
+				88EF12BC21D5BBBF0043CE5A /* Frameworks */,
+				88EF12BD21D5BBBF0043CE5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSCycleScrollView;
+			productName = MSCycleScrollView;
+			productReference = 88EF12BF21D5BBBF0043CE5A /* MSCycleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88EF12B721D5BBBF0043CE5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = turBur;
+				TargetAttributes = {
+					88EF12BE21D5BBBF0043CE5A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 88EF12BA21D5BBBF0043CE5A /* Build configuration list for PBXProject "MSCycleScrollView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88EF12B621D5BBBF0043CE5A;
+			productRefGroup = 88EF12C021D5BBBF0043CE5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88EF12BE21D5BBBF0043CE5A /* MSCycleScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88EF12BD21D5BBBF0043CE5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88EF130921D611160043CE5A /* pageControlDot@3x.png in Resources */,
+				88EF130421D611160043CE5A /* h3.jpg in Resources */,
+				88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */,
+				88EF130A21D611160043CE5A /* placeholder@2x.png in Resources */,
+				88EF130821D611160043CE5A /* h4.jpg in Resources */,
+				88EF130521D611160043CE5A /* pageControlCurrentDot@3x.png in Resources */,
+				88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */,
+				88EF12CA21D5BBBF0043CE5A /* Main.storyboard in Resources */,
+				88EF130721D611160043CE5A /* h2.jpg in Resources */,
+				88EF130321D611160043CE5A /* 005.jpg in Resources */,
+				88EF130121D611160043CE5A /* pageControlDot@2x.png in Resources */,
+				88EF130621D611160043CE5A /* h1.jpg in Resources */,
+				88EF130221D611160043CE5A /* pageControlCurrentDot@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DB52064DFEA57AF74A33EF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MSCycleScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88EF12BB21D5BBBF0043CE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */,
+				88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */,
+				88EF12C721D5BBBF0043CE5A /* ViewController.m in Sources */,
+				88EF12D221D5BBC50043CE5A /* main.m in Sources */,
+				88EF12C421D5BBBF0043CE5A /* AppDelegate.m in Sources */,
+				88EF12DD21D5BBE70043CE5A /* MSAnimatedDotView.m in Sources */,
+				88EF12F521D5FC270043CE5A /* TestView.m in Sources */,
+				88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */,
+				88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */,
+				88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */,
+				88EF12DE21D5BBE70043CE5A /* MSPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88EF12C821D5BBBF0043CE5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88EF12C921D5BBBF0043CE5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88EF12CE21D5BBC50043CE5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88EF12D321D5BBC50043CE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88EF12D421D5BBC50043CE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88EF12D621D5BBC50043CE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAWCVDY3ZB;
+				INFOPLIST_FILE = MSCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.turbur.MSCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88EF12D721D5BBC50043CE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02AD4E59D6F3708B27831FB0 /* Pods-MSCycleScrollView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAWCVDY3ZB;
+				INFOPLIST_FILE = MSCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.turbur.MSCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88EF12BA21D5BBBF0043CE5A /* Build configuration list for PBXProject "MSCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88EF12D321D5BBC50043CE5A /* Debug */,
+				88EF12D421D5BBC50043CE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88EF12D521D5BBC50043CE5A /* Build configuration list for PBXNativeTarget "MSCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88EF12D621D5BBC50043CE5A /* Debug */,
+				88EF12D721D5BBC50043CE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88EF12B721D5BBBF0043CE5A /* Project object */;
+}
