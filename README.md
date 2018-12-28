@@ -1,0 +1,2 @@
+# MSCycleScrollView
+基于SDCycleScrollView的基础上添加PageControl的自定义属性，可更具自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、动画，以及各点之间的间距大小等；
