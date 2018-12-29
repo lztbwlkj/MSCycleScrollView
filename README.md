@@ -6,7 +6,7 @@
 #### 代码参考于一款优秀的轮播图框架：[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView.git)。也十分感谢[高少东(gsdios)](https://github.com/gsdios)作者。
 
 ### 效果图展示:
-
+###### (请原谅电脑太卡，不能为大家上传gif图片难受！！！)
 <table>
 <tr>
 <th>默认样式</th>
