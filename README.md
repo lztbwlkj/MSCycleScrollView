@@ -13,16 +13,16 @@
 <th>默认动画样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="350" height="150"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="350" height="150"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="320" height="180"></td>
 </tr>
 <tr>
 <th>自定义pageControl样式</th>
 <th>自定义图片样式 </th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0569.jpg" width="350" height="150"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0570.jpg" width="350" height="150"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0569.jpg" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0570.jpg" width="320" height="180"></td>
 </tr> 
 <tr>
 <th>只显示文本样式</th>
