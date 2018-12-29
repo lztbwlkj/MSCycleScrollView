@@ -13,7 +13,7 @@
 <th>默认动画样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0572.jpg" width="320" height="180"></td>
 <td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="320" height="180"></td>
 </tr>
 <tr>
