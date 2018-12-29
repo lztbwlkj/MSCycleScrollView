@@ -59,7 +59,7 @@
                         @"感谢您的支持，如果下载的",
                         @"如果代码在使用过程中出现问题",
                         @"您可以发邮件到lztbwlkj@gmail.com"
-                        @"或者您可以ission"
+                        @"或者您可以issues"
                         ];
     
     CGFloat w = self.view.bounds.size.width;
@@ -69,10 +69,10 @@
     // 本地加载 --- 创建不带标题的图片轮播器
     MSCycleScrollView *cycleScrollView = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 64, w, 180) InfiniteLoop:YES locationImageNames:imageNames];
     cycleScrollView.delegate = self;
-    cycleScrollView.pageControlStyle = kMSPageContolStyleAnimated;
     [demoContainerView addSubview:cycleScrollView];
         //         --- 轮播时间间隔，默认1.0秒，可自定义
     //cycleScrollView.autoScrollTimeInterval = 4.0;
+    cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     // >>>>>>>>>>>>>>>>>>>>>>>>> demo轮播图2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     // 网络加载 --- 创建带标题的图片轮播器

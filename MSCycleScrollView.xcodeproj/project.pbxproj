@@ -20,7 +20,6 @@
 		88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */; };
 		88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */; };
 		88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */; };
-		88EF12F521D5FC270043CE5A /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12F421D5FC270043CE5A /* TestView.m */; };
 		88EF130121D611160043CE5A /* pageControlDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F721D611160043CE5A /* pageControlDot@2x.png */; };
 		88EF130221D611160043CE5A /* pageControlCurrentDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */; };
 		88EF130321D611160043CE5A /* 005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F921D611160043CE5A /* 005.jpg */; };
@@ -62,8 +61,6 @@
 		88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSExampleDotView.h; sourceTree = "<group>"; };
 		88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSExampleDotView.m; sourceTree = "<group>"; };
-		88EF12F321D5FC270043CE5A /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		88EF12F421D5FC270043CE5A /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		88EF12F721D611160043CE5A /* pageControlDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@2x.png"; sourceTree = "<group>"; };
 		88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@2x.png"; sourceTree = "<group>"; };
 		88EF12F921D611160043CE5A /* 005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpg; sourceTree = "<group>"; };
@@ -119,8 +116,6 @@
 				88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */,
 				88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */,
 				88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */,
-				88EF12F321D5FC270043CE5A /* TestView.h */,
-				88EF12F421D5FC270043CE5A /* TestView.m */,
 				88EF12C821D5BBBF0043CE5A /* Main.storyboard */,
 				88EF12CB21D5BBC50043CE5A /* Assets.xcassets */,
 				88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */,
@@ -309,7 +304,6 @@
 				88EF12D221D5BBC50043CE5A /* main.m in Sources */,
 				88EF12C421D5BBBF0043CE5A /* AppDelegate.m in Sources */,
 				88EF12DD21D5BBE70043CE5A /* MSAnimatedDotView.m in Sources */,
-				88EF12F521D5FC270043CE5A /* TestView.m in Sources */,
 				88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */,
 				88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */,
 				88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */,
