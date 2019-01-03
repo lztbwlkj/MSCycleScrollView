@@ -43,18 +43,19 @@
     _titleLabel.font = titleLabelTextFont;
 }
 
-- (void)setupImageView
-{
+- (void)setupImageView{
     UIImageView *imageView = [[UIImageView alloc] init];
     _imageView = imageView;
     [self.contentView addSubview:imageView];
 }
 
+    
 - (void)setupTitleLabel
 {
     UILabel *titleLabel = [[UILabel alloc] init];
     _titleLabel = titleLabel;
     _titleLabel.hidden = YES;
+    _titleLabel.numberOfLines = 1;
     [self.contentView addSubview:titleLabel];
 }
 
@@ -62,6 +63,17 @@
 {
     _title = [title copy];
     _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
+    if (_titleLabel.hidden) {
+        _titleLabel.hidden = NO;
+    }
+}
+
+- (void)setAttributeTitle:(NSAttributedString *)attributeTitle {
+    _attributeTitle = [attributeTitle copy];
+    if ([attributeTitle isKindOfClass:[NSAttributedString class]]) {
+        _titleLabel.attributedText = attributeTitle;
+    }
+    
     if (_titleLabel.hidden) {
         _titleLabel.hidden = NO;
     }
@@ -79,6 +91,7 @@
     
     if (self.onlyDisplayText) {
         _titleLabel.frame = self.bounds;
+     
     } else {
         _imageView.frame = self.bounds;
         CGFloat titleLabelW = self.sd_width;
@@ -88,4 +101,5 @@
         _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
     }
 }
+                        
 @end

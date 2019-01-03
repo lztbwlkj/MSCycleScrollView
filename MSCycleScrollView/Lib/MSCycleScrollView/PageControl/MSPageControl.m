@@ -59,8 +59,7 @@ static CGSize const kDefaultDotSize = {8, 8};
 }
 
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         [self initialization];

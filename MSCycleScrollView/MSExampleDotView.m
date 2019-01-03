@@ -79,9 +79,8 @@ static CGFloat const kAnimateDuration = 1;
     } completion:nil];
 }
 
-- (void)animateToDeactiveState:(MSAbstractDotView *)dotView otherPageDotSize:(CGSize)pageDotSize
-{
-
+- (void)animateToDeactiveState:(MSAbstractDotView *)dotView otherPageDotSize:(CGSize)pageDotSize{
+    
     //需要什么样式，或者什么样式的动画可自定义
     [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         

@@ -87,7 +87,7 @@ typedef enum {
 @property (nonatomic, strong) NSArray *locationImageNames;
 
 /**
- 自动滚动间隔时间,默认2s
+ 自动滚动间隔时间,默认3s
  */
 @property (nonatomic, assign) CGFloat autoScrollTimeInterval;
 
@@ -228,6 +228,8 @@ typedef enum {
  轮播文字label背景颜色
  */
 @property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
+
+
 
 #pragma mark ================== 初始化方式 ==================
 

@@ -60,10 +60,10 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
 - (void)initialization{
     
-    self.backgroundColor = [UIColor clearColor];
-    
+    self.backgroundColor = [UIColor lightGrayColor];
+
     _pageControlAliment = kMSPageContolAlimentCenter;
-    _autoScrollTimeInterval = 2.0;
+    _autoScrollTimeInterval = 3.0;
     _titleLabelTextColor = [UIColor whiteColor];
     _titleLabelTextFont= [UIFont systemFontOfSize:14];
     _titleLabelBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
@@ -84,8 +84,8 @@ NSString * const ID = @"MSCycleScrollViewCell";
 }
 
 // 设置显示图片的collectionView
-- (void)setupMainView
-{
+- (void)setupMainView{
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 0;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -102,6 +102,13 @@ NSString * const ID = @"MSCycleScrollViewCell";
     mainView.delegate = self;
     mainView.scrollsToTop = NO;
     [self addSubview:mainView];
+    
+    //ios11 兼容性适配
+    if (@available(iOS 11.0, *)) {
+        mainView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        mainView.insetsLayoutMarginsFromSafeArea = NO;
+    }
+    
     _mainView = mainView;
 }
 
@@ -124,8 +131,7 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
 #pragma mark - properties
 
-- (void)setDelegate:(id<MSCycleScrollViewDelegate>)delegate
-{
+- (void)setDelegate:(id<MSCycleScrollViewDelegate>)delegate{
     _delegate = delegate;
 
     if ([self.delegate respondsToSelector:@selector(customCellClassForCycleScrollView:)] && [self.delegate customCellClassForCycleScrollView:self]) {
@@ -138,17 +144,23 @@ NSString * const ID = @"MSCycleScrollViewCell";
 - (void)setPlaceholderImage:(UIImage *)placeholderImage
 {
     _placeholderImage = placeholderImage;
-
-    if (!self.backgroundImageView) {
+    
+    if (!self.backgroundImageView ) {
+        
         UIImageView *bgImageView = [UIImageView new];
         bgImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self insertSubview:bgImageView belowSubview:self.mainView];
         self.backgroundImageView = bgImageView;
     }
-
     self.backgroundImageView.image = placeholderImage;
 }
+    
+-(void)setOnlyDisplayText:(BOOL)onlyDisplayText{
+    _onlyDisplayText = onlyDisplayText;
+    self.backgroundImageView.image = nil;
+}
 
+    
 - (void)setPageControlDotSize:(CGSize)pageControlDotSize
 {
     _pageControlDotSize = pageControlDotSize;
@@ -261,8 +273,7 @@ NSString * const ID = @"MSCycleScrollViewCell";
     }
 }
 
-- (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection
-{
+- (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection{
     _scrollDirection = scrollDirection;
 
     _flowLayout.scrollDirection = scrollDirection;
@@ -300,7 +311,11 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
     [self setupPageControl];
     
-    [self.mainView reloadData];
+//    [self.mainView reloadData];
+
+    [UIView performWithoutAnimation:^{
+        [self.mainView reloadData];
+    }];
 }
 
 -(void)setImageUrls:(NSArray *)imageUrls{
@@ -343,8 +358,14 @@ NSString * const ID = @"MSCycleScrollViewCell";
         self.imageUrls = [temp copy];
     }
 }
+    
+- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
+    self.backgroundImageView.contentMode = bannerImageViewContentMode;
+    _bannerImageViewContentMode = bannerImageViewContentMode;
+}
 
 
+    
 - (void)disableScrollGesture {
     self.mainView.canCancelContentTouches = NO;
     for (UIGestureRecognizer *gesture in self.mainView.gestureRecognizers) {
@@ -622,11 +643,11 @@ NSString * const ID = @"MSCycleScrollViewCell";
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didSelectItemAtIndex:)]) {
         [self.delegate cycleScrollView:self didSelectItemAtIndex:[self pageControlIndexWithCurrentCellIndex:indexPath.item]];
     }
+    
     if (self.clickItemOperationBlock) {
         self.clickItemOperationBlock([self pageControlIndexWithCurrentCellIndex:indexPath.item]);
     }

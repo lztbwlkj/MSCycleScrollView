@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //定制一个默认的dotView样式
 @interface MSAnimatedDotView : MSAbstractDotView
+    
 @property (nonatomic, strong) UIColor *dotColor;
 
 
