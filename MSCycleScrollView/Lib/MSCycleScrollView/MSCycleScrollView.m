@@ -155,12 +155,6 @@ NSString * const ID = @"MSCycleScrollViewCell";
     self.backgroundImageView.image = placeholderImage;
 }
     
--(void)setOnlyDisplayText:(BOOL)onlyDisplayText{
-    _onlyDisplayText = onlyDisplayText;
-    self.backgroundImageView.image = nil;
-}
-
-    
 - (void)setPageControlDotSize:(CGSize)pageControlDotSize
 {
     _pageControlDotSize = pageControlDotSize;
@@ -359,10 +353,10 @@ NSString * const ID = @"MSCycleScrollViewCell";
     }
 }
     
-- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
-    self.backgroundImageView.contentMode = bannerImageViewContentMode;
-    _bannerImageViewContentMode = bannerImageViewContentMode;
-}
+//- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
+//    self.backgroundImageView.contentMode = bannerImageViewContentMode;
+//    _bannerImageViewContentMode = bannerImageViewContentMode;
+//}
 
 
     

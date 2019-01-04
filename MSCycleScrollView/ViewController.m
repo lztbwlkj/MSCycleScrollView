@@ -117,14 +117,14 @@
     
     // 网络加载 --- 创建只上下滚动展示文字的轮播器
     // 由于模拟器的渲染问题，如果发现轮播时有一条线不必处理，模拟器放大到100%或者真机调试是不会出现那条线的
-    MSCycleScrollView *cycleScrollView4 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 750, w, 40) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    MSCycleScrollView *cycleScrollView4 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 750, w, 40) delegate:self placeholderImage:nil];
     cycleScrollView4.scrollDirection = UICollectionViewScrollDirectionVertical;
     cycleScrollView4.onlyDisplayText = YES;
     cycleScrollView4.autoScrollTimeInterval = 3;
 
     NSMutableArray *titlesArray = [NSMutableArray new];
     [titlesArray addObject:@"纯文字上下滚动轮播-- demo轮播图4,纯文字上下滚动"];
-    [titlesArray addObject:@"纯文字上下滚动轮播 -- demo轮播图4,纯文字上下滚动轮播 -- demo轮播图4,纯文字上下滚动轮播 -- demo轮播图4"];
+    [titlesArray addObject:@"纯文字上下滚动轮播 -- demo轮播图4"];
 //    [titlesArray addObjectsFromArray:titles];
     cycleScrollView4.titles = [titlesArray copy];
     [cycleScrollView4 disableScrollGesture];
