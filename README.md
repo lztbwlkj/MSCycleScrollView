@@ -1,7 +1,8 @@
 # MSCycleScrollView
-一款在SDCycleScrollView的基础上对PageControl的样式进行扩展的轮播图,可根据自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、图片、边框颜色、边框宽度、方形点或者圆形点、以及各点之间的间距大小等，定制样式多样化！欢迎大家使用
+一款在SDCycleScrollView的基础上对PageControl的样式进行扩展的轮播图,可根据自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、图片、边框颜色、边框宽度、方形点或者圆形点、以及各点之间的间距大小等，定制样式多样化！欢迎大家使用,
 
 ---
+#### 最近工作比较忙，没有更新REAMD.md文件效果图，具体效果还请下载Demo运行查看
 
 #### 代码参考于一款优秀的轮播图框架：[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView.git)。也十分感谢[高少东(gsdios)](https://github.com/gsdios)作者。
 
