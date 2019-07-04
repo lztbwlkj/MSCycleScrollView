@@ -10,19 +10,19 @@ Pod::Spec.new do |spec|
 #
 
 spec.name         = "MSCycleScrollView"
-spec.version      = "0.0.1"
-spec.summary      = "一款定制性极高的轮播图,可根据自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、动画，以及各点之间的间距大小等"
+spec.version      = "0.0.2"
+spec.summary      = "一款在SDCycleScrollView的基础上对PageControl的样式进行扩展的轮播图,可根据自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、图片、边框颜色、边框宽度、方形点或者圆形点、以及各点之间的间距大小等，定制样式多样化！欢迎大家使用"
 spec.description  = <<-DESC
-                一款定制性极高的轮播图，可自定义PageControl的样式（包括小圆点+横线的样式）
+                一款在SDCycleScrollView的基础上对PageControl的样式进行扩展的轮播图
 DESC
 
 spec.homepage     = "https://github.com/lztbwlkj/MSCycleScrollView.git"
 spec.license          = { :type => 'MIT', :file => 'LICENSE' }
 spec.author             = { "lztbwlkj" => "lztbwlkj@gmail.com" }
-spec.platform     = :ios,"8.0"
+spec.platform     = :ios,"9.0"
 spec.source       = { :git => "https://github.com/lztbwlkj/MSCycleScrollView.git", :tag => "#{spec.version}" }
 spec.source_files  = "MSCycleScrollView/Lib/MSCycleScrollView/**/*"
 spec.requires_arc = true
-spec.dependency 'SDWebImage', '~> 4.0.0'
+spec.dependency 'SDWebImage'
 
 end

@@ -7,12 +7,10 @@
 //
 
 #import "MSCycleScrollView.h"
-#import "SDWebImageManager.h"
+#import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
 #import "MSCollectionViewCell.h"
 #import "UIView+MSExtension.h"
-#import "MSPageControl.h"
-#import "MSAnimatedDotView.h"
 
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(8, 8)
 NSString * const ID = @"MSCycleScrollViewCell";
@@ -21,11 +19,12 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
 
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
+@property (nonatomic, strong) MSPageControl *pageControl;
+
 @property (nonatomic, weak) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSArray *imagePathsGroup;
 @property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic, assign) NSInteger totalItemsCount;
-@property (nonatomic, weak) UIControl *pageControl;
 
 @property (nonatomic, strong) UIImageView *backgroundImageView; // 当imageURLs为空时的背景图
 
@@ -75,12 +74,27 @@ NSString * const ID = @"MSCycleScrollViewCell";
     _pageControlDotSize = kCycleScrollViewInitialPageControlDotSize;
     _pageControlBottomOffset = 0;
     _pageControlRightOffset = 0;
-    _pageControlStyle = kMSPageContolStyleClassic;
     _hidesForSinglePage = YES;
     _currentPageDotColor = [UIColor whiteColor];
     _pageDotColor = [UIColor lightGrayColor];
     _bannerImageViewContentMode = UIViewContentModeScaleToFill;
-    _dotViewClass = [MSAnimatedDotView class];
+    _spacingBetweenDots = 8;
+    _currentWidthMultiple = 1;//当前选中点宽度与未选中点的宽度的倍数，默认为1倍
+    _dotsIsSquare = NO;//默认是圆点
+    
+    _currentDotBorderWidth = 0;
+    _currentDotBorderColor = [UIColor clearColor];
+    
+    _dotBorderColor = [UIColor whiteColor];
+    _dotBorderWidth = 0;
+    
+    _pageControlStyle = MSPageControlStyleSystem;
+    _pageControlAnimation = MSPageControlAnimationNone;
+    
+    self.textFont = [UIFont systemFontOfSize:9];
+    self.textColor = [UIColor blackColor];
+    
+    
 }
 
 // 设置显示图片的collectionView
@@ -145,10 +159,10 @@ NSString * const ID = @"MSCycleScrollViewCell";
 {
     _placeholderImage = placeholderImage;
     
-    if (!self.backgroundImageView ) {
+    if (!self.backgroundImageView) {
         
-        UIImageView *bgImageView = [UIImageView new];
-        bgImageView.contentMode = UIViewContentModeScaleAspectFit;
+        UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.mainView.bounds];
+        bgImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self insertSubview:bgImageView belowSubview:self.mainView];
         self.backgroundImageView = bgImageView;
     }
@@ -158,35 +172,90 @@ NSString * const ID = @"MSCycleScrollViewCell";
 - (void)setPageControlDotSize:(CGSize)pageControlDotSize
 {
     _pageControlDotSize = pageControlDotSize;
-    [self setupPageControl];
-    if ([self.pageControl isKindOfClass:[MSPageControl class]]) {
-        MSPageControl *pageContol = (MSPageControl *)_pageControl;
-        pageContol.pageDotSize = pageControlDotSize;
-    }
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.pageDotSize = pageControlDotSize;
 }
 
-- (void)setShowPageControl:(BOOL)showPageControl
-{
+- (void)setShowPageControl:(BOOL)showPageControl{
     _showPageControl = showPageControl;
-
     _pageControl.hidden = !showPageControl;
 }
 
 -(void)setSpacingBetweenDots:(CGFloat)spacingBetweenDots{
+    if (_spacingBetweenDots == spacingBetweenDots) return;
+
     _spacingBetweenDots = spacingBetweenDots;
-    [self setupPageControl];
-    if ([self.pageControl isKindOfClass:[MSPageControl class]]) {
-        MSPageControl *pageControl = (MSPageControl *)_pageControl;
-        pageControl.spacingBetweenDots = spacingBetweenDots;
-    }
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.spacingBetweenDots = spacingBetweenDots;
 }
+
+- (void)setDotBorderWidth:(CGFloat)dotBorderWidth{
+    if (_dotBorderWidth == dotBorderWidth) return;
+    
+    _dotBorderWidth = dotBorderWidth;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.dotBorderWidth = dotBorderWidth;
+}
+
+-(void)setCurrentDotBorderWidth:(CGFloat)currentDotBorderWidth{
+    if (_currentDotBorderWidth == currentDotBorderWidth) return;
+    _currentDotBorderWidth = currentDotBorderWidth;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.currentDotBorderWidth = currentDotBorderWidth;
+
+}
+
+-(void)setDotBorderColor:(UIColor *)dotBorderColor{
+    if (_dotBorderColor == dotBorderColor) return;
+    _dotBorderColor = dotBorderColor;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.dotBorderColor = dotBorderColor;
+
+}
+-(void)setPageControlAnimation:(MSPageControlAnimation)pageControlAnimation{
+    if (_pageControlAnimation == pageControlAnimation) return;
+    _pageControlAnimation = pageControlAnimation;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.pageControlAnimation = pageControlAnimation;
+}
+
+-(void)setCurrentDotBorderColor:(UIColor *)currentDotBorderColor{
+    if (_currentDotBorderColor == currentDotBorderColor) return;
+    
+    _currentDotBorderColor = currentDotBorderColor;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.currentDotBorderColor = currentDotBorderColor;
+}
+
+-(void)setCurrentWidthMultiple:(CGFloat)currentWidthMultiple{
+    if (_currentWidthMultiple == currentWidthMultiple) return;
+    
+    _currentWidthMultiple = currentWidthMultiple;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.currentWidthMultiple = currentWidthMultiple;
+}
+
+-(void)setDotsIsSquare:(BOOL)dotsIsSquare{
+    if (_dotsIsSquare == dotsIsSquare) return;
+    _dotsIsSquare = dotsIsSquare;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.dotsIsSquare = dotsIsSquare;
+}
+
+-(void)setPageControlStyle:(MSPageControlStyle)pageControlStyle{
+    if (_pageControlStyle == pageControlStyle) return;
+    _pageControlStyle = pageControlStyle;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.pageControlStyle = pageControlStyle;
+}
+
 
 - (void)setCurrentPageDotColor:(UIColor *)currentPageDotColor
 {
     _currentPageDotColor = currentPageDotColor;
     if ([self.pageControl isKindOfClass:[MSPageControl class]]) {
         MSPageControl *pageControl = (MSPageControl *)_pageControl;
-        pageControl.dotColor = currentPageDotColor;
+        pageControl.currentDotColor = currentPageDotColor;
     } else {
         UIPageControl *pageControl = (UIPageControl *)_pageControl;
         pageControl.currentPageIndicatorTintColor = currentPageDotColor;
@@ -195,21 +264,28 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
 - (void)setPageDotColor:(UIColor *)pageDotColor
 {
+    if (_pageDotColor == pageDotColor) return;
     _pageDotColor = pageDotColor;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.dotColor = pageDotColor;
+}
+-(void)setTextFont:(UIFont *)textFont{
+    if (_textFont == textFont) return;
+    _textFont = textFont;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.textFont = textFont;
+}
 
-    if ([self.pageControl isKindOfClass:[UIPageControl class]]) {
-        UIPageControl *pageControl = (UIPageControl *)_pageControl;
-        pageControl.pageIndicatorTintColor = pageDotColor;
-    }
+-(void)setTextColor:(UIColor *)textColor{
+    if (_textColor == textColor) return;
+    _textColor = textColor;
+    MSPageControl *pageControl = (MSPageControl *)_pageControl;
+    pageControl.textColor = textColor;
 }
 
 - (void)setCurrentPageDotImage:(UIImage *)currentPageDotImage
 {
     _currentPageDotImage = currentPageDotImage;
-
-    if (self.pageControlStyle != kMSPageContolStyleAnimated) {
-        self.pageControlStyle = kMSPageContolStyleAnimated;
-    }
 
     [self setCustomPageControlDotImage:currentPageDotImage isCurrentPageDot:YES];
 }
@@ -218,21 +294,9 @@ NSString * const ID = @"MSCycleScrollViewCell";
 {
     _pageDotImage = pageDotImage;
 
-    if (self.pageControlStyle != kMSPageContolStyleAnimated) {
-        self.pageControlStyle = kMSPageContolStyleAnimated;
-    }
-
     [self setCustomPageControlDotImage:pageDotImage isCurrentPageDot:NO];
 }
 
--(void)setDotViewClass:(Class)dotViewClass{
-    _dotViewClass = dotViewClass;
-    [self setupPageControl];
-    if ([self.pageControl isKindOfClass:[MSPageControl class]]) {
-        MSPageControl *pageControl = (MSPageControl *)_pageControl;
-        pageControl.dotViewClass = dotViewClass;
-    }
-}
 
 - (void)setCustomPageControlDotImage:(UIImage *)image isCurrentPageDot:(BOOL)isCurrentPageDot
 {
@@ -273,17 +337,9 @@ NSString * const ID = @"MSCycleScrollViewCell";
     _flowLayout.scrollDirection = scrollDirection;
 }
 
-- (void)setAutoScrollTimeInterval:(CGFloat)autoScrollTimeInterval
-{
+- (void)setAutoScrollTimeInterval:(CGFloat)autoScrollTimeInterval{
     _autoScrollTimeInterval = autoScrollTimeInterval;
-
     [self setAutoScroll:self.autoScroll];
-}
-
--(void)setPageControlStyle:(kMSPageContolStyle)pageControlStyle{
-    _pageControlStyle = pageControlStyle;
-    
-    [self setupPageControl];
 }
 
 
@@ -331,6 +387,8 @@ NSString * const ID = @"MSCycleScrollViewCell";
     
     self.imagePathsGroup = [temp copy];
     
+    [self setupPageControl];
+
     [self.mainView reloadData];
 
 }
@@ -398,47 +456,15 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
     int indexOnPageControl = [self pageControlIndexWithCurrentCellIndex:[self currentIndex]];
 
-    switch (self.pageControlStyle) {
-        case kMSPageContolStyleAnimated:
-        {
-            MSPageControl *pageControl = [[MSPageControl alloc] init];
-            pageControl.numberOfPages = self.imagePathsGroup.count;
-            pageControl.dotColor = self.currentPageDotColor;
-            pageControl.userInteractionEnabled = NO;
-            pageControl.currentPage = indexOnPageControl;
-            [self addSubview:pageControl];
-            _pageControl = pageControl;
-        }
-            break;
-
-        case kMSPageContolStyleClassic:
-        {
-            UIPageControl *pageControl = [[UIPageControl alloc] init];
-            pageControl.numberOfPages = self.imagePathsGroup.count;
-            pageControl.currentPageIndicatorTintColor = self.currentPageDotColor;
-            pageControl.pageIndicatorTintColor = self.pageDotColor;
-            pageControl.userInteractionEnabled = NO;
-            pageControl.currentPage = indexOnPageControl;
-            [self addSubview:pageControl];
-            _pageControl = pageControl;
-        }
-            break;
-        case kMSPageContolStyleCustomer:
-        {
-            MSPageControl *pageControl = [[MSPageControl alloc] init];
-            pageControl.numberOfPages = self.imagePathsGroup.count;
-            pageControl.dotColor = self.currentPageDotColor;
-            pageControl.userInteractionEnabled = NO;
-            pageControl.currentPage = indexOnPageControl;
-            pageControl.dotViewClass = self.dotViewClass;
-            [self addSubview:pageControl];
-            _pageControl = pageControl;
-        }
-            break;
-        default:
-            break;
-    }
-
+    self.pageControl = [[MSPageControl alloc] init];
+    self.pageControl.numberOfPages = self.imagePathsGroup.count;
+    self.pageControl.userInteractionEnabled = NO;
+    self.pageControl.currentPage = indexOnPageControl;
+    self.pageControl.spacingBetweenDots = self.spacingBetweenDots;
+    self.pageControl.currentWidthMultiple = self.currentWidthMultiple;
+    self.pageControl.pageControlAnimation = self.pageControlAnimation;
+    [self addSubview:self.pageControl];
+    
     // 重设pagecontroldot图片
     if (self.currentPageDotImage) {
         self.currentPageDotImage = self.currentPageDotImage;
@@ -490,14 +516,13 @@ NSString * const ID = @"MSCycleScrollViewCell";
     return (int)index % self.imagePathsGroup.count;
 }
 
-- (void)clearCache
-{
+- (void)clearCache{
     [[self class] clearImagesCache];
 }
 
-+ (void)clearImagesCache
-{
-    [[[SDWebImageManager sharedManager] imageCache] clearDiskOnCompletion:nil];
++ (void)clearImagesCache{
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
 }
 
 #pragma mark - life circles

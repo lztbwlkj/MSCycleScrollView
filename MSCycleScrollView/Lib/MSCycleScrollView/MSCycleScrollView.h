@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSPageControl.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef enum {
@@ -14,12 +15,7 @@ typedef enum {
     kMSPageContolAlimentCenter
 } kMSPageContolAliment;
 
-typedef enum {
-    kMSPageContolStyleClassic,        // 系统自带经典样式
-    kMSPageContolStyleAnimated,       // 动画效果pagecontrol
-    kMSPageContolStyleCustomer,       // 自定义动画效果pagecontrol
-    kMSPageContolStyleNone            // 不显示pagecontrol
-} kMSPageContolStyle;
+
 @class MSCycleScrollView;
 
 @protocol MSCycleScrollViewDelegate <NSObject>
@@ -133,23 +129,20 @@ typedef enum {
 @property (nonatomic, assign) BOOL onlyDisplayText;
 
 /**
- pagecontrol 样式，默认为动画样式
- */
-@property (nonatomic, assign) kMSPageContolStyle pageControlStyle;
-
-/**
   分页控件位置
  */
 @property (nonatomic, assign) kMSPageContolAliment pageControlAliment;
 
-
-#pragma mark ================== PageControl属性设置 ==================
 /**
- 定制PageControl的样式 继承MSAbstractDotView类可自行定义pageControl的样式、动画；
- ⚠️：如果调用该属性自定义了pageControl的样式，则关于pageControl颜色属性将失效；
+ MSPageControl的过渡动画 目前只支持两种样式 其他样式需要自定义（自定义样式暂未开放）
  */
-@property (nonatomic) Class dotViewClass;
+@property(nonatomic,assign) MSPageControlAnimation pageControlAnimation;
+#pragma mark ================== PageControl属性设置 ==================
 
+/**
+ MSPageControl的样式 目前只支持两种样式
+ */
+@property(nonatomic,assign) MSPageControlStyle pageControlStyle;
 /**
  是否显示分页控件
  */
@@ -176,35 +169,78 @@ typedef enum {
 @property (nonatomic, assign) CGFloat pageControlRightOffset;
 
 /**
- 分页控件小圆标大小
+ * 分页控件小圆标大小
+ * 如果设置了 currentPageDotImage 和 pageDotImage 则pageControlDotSize将失效
  */
 @property (nonatomic, assign) CGSize pageControlDotSize;
 
 /**
- 当前分页控件小圆标颜色 ⚠️：如果调用了dotViewClass的属性，则该属性失效
+ 当前分页控件小圆标颜色
  */
 @property (nonatomic, strong) UIColor *currentPageDotColor;
 
 /**
- 其他分页控件小圆标颜色 ⚠️：如果调用了dotViewClass的属性，则该属性失效
+ 其他分页控件小圆标颜色
  */
 @property (nonatomic, strong) UIColor *pageDotColor;
 
 /**
- 当前分页控件小圆标图片 ⚠️：如果调用了dotViewClass的属性，则该属性失效
+ 当前分页控件小圆标图片
  */
 @property (nonatomic, strong) UIImage *currentPageDotImage;
 
 /**
- 其他分页控件小圆标图片 ⚠️：如果调用了dotViewClass的属性，则该属性失效
+ 其他分页控件小圆标图片
  */
 @property (nonatomic, strong) UIImage *pageDotImage;
 
+#pragma mark - 新增属性
+/**
+ 是否是方形点 默认NO 显示圆形
+ */
+@property(nonatomic, assign) BOOL dotsIsSquare;
+
+/**
+ 当前选中点宽度与未选中点的宽度的倍数 默认是1
+ * 计算方法 pageDotSize.width = pageDotSize.width * currentWidthMultiple；
+ */
+@property(nonatomic, assign) CGFloat currentWidthMultiple;
+
+/**
+ 未选中点的layerColor
+ */
+@property(nonatomic, strong) UIColor *dotBorderColor;
+
+/**
+ 选中点的layerColor
+ */
+@property(nonatomic, strong) UIColor *currentDotBorderColor;
+
+/**
+ 未选中点的layer宽度
+ */
+@property(nonatomic, assign) CGFloat dotBorderWidth;
+
+/**
+ 选中点的layer宽度
+ */
+@property(nonatomic, assign) CGFloat currentDotBorderWidth;
 
 /**
   轮播文字label对齐方式
  */
 @property (nonatomic, assign) NSTextAlignment titleLabelTextAlignment;
+
+
+/**
+ pageControlAnimation为MSPageControlStyleNumber时字体设置
+ */
+@property(nonatomic,strong) UIFont *textFont;
+
+/**
+ pageControlAnimation为MSPageControlStyleNumber时文本颜色设置
+ */
+@property(nonatomic,strong) UIColor *textColor;
 
 
 @property (nonatomic, weak) id<MSCycleScrollViewDelegate> delegate;

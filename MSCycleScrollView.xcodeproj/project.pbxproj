@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5943328322CDD0130053674A /* MSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5943328222CDD0120053674A /* MSPageControl.m */; };
 		88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39B21D72EBE0032D826 /* timg2.jpeg */; };
 		88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39C21D72EBE0032D826 /* timg1.jpeg */; };
 		88D4C3A121D72EBF0032D826 /* timg3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39D21D72EBF0032D826 /* timg3.jpeg */; };
@@ -17,18 +18,11 @@
 		88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CB21D5BBC50043CE5A /* Assets.xcassets */; };
 		88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */; };
 		88EF12D221D5BBC50043CE5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12D121D5BBC50043CE5A /* main.m */; };
-		88EF12DD21D5BBE70043CE5A /* MSAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */; };
-		88EF12DE21D5BBE70043CE5A /* MSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12DA21D5BBE70043CE5A /* MSPageControl.m */; };
 		88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */; };
 		88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */; };
 		88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */; };
 		88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */; };
-		88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */; };
-		88EF130121D611160043CE5A /* pageControlDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F721D611160043CE5A /* pageControlDot@2x.png */; };
-		88EF130221D611160043CE5A /* pageControlCurrentDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */; };
 		88EF130321D611160043CE5A /* 005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F921D611160043CE5A /* 005.jpg */; };
-		88EF130521D611160043CE5A /* pageControlCurrentDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */; };
-		88EF130921D611160043CE5A /* pageControlDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12FF21D611160043CE5A /* pageControlDot@3x.png */; };
 		88EF130A21D611160043CE5A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF130021D611160043CE5A /* placeholder.png */; };
 		C2EE8BF437CB100D5D1A6268 /* libPods-MSCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */; };
 /* End PBXBuildFile section */
@@ -36,6 +30,8 @@
 /* Begin PBXFileReference section */
 		02AD4E59D6F3708B27831FB0 /* Pods-MSCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.release.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
 		074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5943328122CDD0120053674A /* MSPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPageControl.h; sourceTree = "<group>"; };
+		5943328222CDD0120053674A /* MSPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPageControl.m; sourceTree = "<group>"; };
 		694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		88D4C39B21D72EBE0032D826 /* timg2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg2.jpeg; path = images/timg2.jpeg; sourceTree = SOURCE_ROOT; };
 		88D4C39C21D72EBE0032D826 /* timg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg1.jpeg; path = images/timg1.jpeg; sourceTree = SOURCE_ROOT; };
@@ -51,10 +47,6 @@
 		88EF12CE21D5BBC50043CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88EF12D021D5BBC50043CE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EF12D121D5BBC50043CE5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAnimatedDotView.m; sourceTree = "<group>"; };
-		88EF12DA21D5BBE70043CE5A /* MSPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPageControl.m; sourceTree = "<group>"; };
-		88EF12DB21D5BBE70043CE5A /* MSPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPageControl.h; sourceTree = "<group>"; };
-		88EF12DC21D5BBE70043CE5A /* MSAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAnimatedDotView.h; sourceTree = "<group>"; };
 		88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCycleScrollView.h; sourceTree = "<group>"; };
 		88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCycleScrollView.m; sourceTree = "<group>"; };
 		88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCell.h; sourceTree = "<group>"; };
@@ -63,13 +55,7 @@
 		88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
 		88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
-		88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSExampleDotView.h; sourceTree = "<group>"; };
-		88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSExampleDotView.m; sourceTree = "<group>"; };
-		88EF12F721D611160043CE5A /* pageControlDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@2x.png"; sourceTree = "<group>"; };
-		88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@2x.png"; sourceTree = "<group>"; };
 		88EF12F921D611160043CE5A /* 005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpg; sourceTree = "<group>"; };
-		88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@3x.png"; sourceTree = "<group>"; };
-		88EF12FF21D611160043CE5A /* pageControlDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@3x.png"; sourceTree = "<group>"; };
 		88EF130021D611160043CE5A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +100,6 @@
 				88EF12C621D5BBBF0043CE5A /* ViewController.m */,
 				88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */,
 				88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */,
-				88EF12F021D5C54C0043CE5A /* MSExampleDotView.h */,
-				88EF12F121D5C54D0043CE5A /* MSExampleDotView.m */,
 				88EF12C821D5BBBF0043CE5A /* Main.storyboard */,
 				88EF12CB21D5BBC50043CE5A /* Assets.xcassets */,
 				88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */,
@@ -128,10 +112,8 @@
 		88EF12D821D5BBD40043CE5A /* PageControl */ = {
 			isa = PBXGroup;
 			children = (
-				88EF12DC21D5BBE70043CE5A /* MSAnimatedDotView.h */,
-				88EF12D921D5BBE70043CE5A /* MSAnimatedDotView.m */,
-				88EF12DB21D5BBE70043CE5A /* MSPageControl.h */,
-				88EF12DA21D5BBE70043CE5A /* MSPageControl.m */,
+				5943328122CDD0120053674A /* MSPageControl.h */,
+				5943328222CDD0120053674A /* MSPageControl.m */,
 			);
 			path = PageControl;
 			sourceTree = "<group>";
@@ -166,10 +148,6 @@
 				88D4C39B21D72EBE0032D826 /* timg2.jpeg */,
 				88D4C39D21D72EBF0032D826 /* timg3.jpeg */,
 				88D4C39E21D72EBF0032D826 /* timg4.jpeg */,
-				88EF12F821D611160043CE5A /* pageControlCurrentDot@2x.png */,
-				88EF12FB21D611160043CE5A /* pageControlCurrentDot@3x.png */,
-				88EF12F721D611160043CE5A /* pageControlDot@2x.png */,
-				88EF12FF21D611160043CE5A /* pageControlDot@3x.png */,
 				88EF130021D611160043CE5A /* placeholder.png */,
 			);
 			path = Resuouce;
@@ -250,19 +228,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EF130921D611160043CE5A /* pageControlDot@3x.png in Resources */,
 				88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */,
 				88D4C3A121D72EBF0032D826 /* timg3.jpeg in Resources */,
 				88EF130A21D611160043CE5A /* placeholder.png in Resources */,
 				88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */,
-				88EF130521D611160043CE5A /* pageControlCurrentDot@3x.png in Resources */,
 				88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */,
 				88EF12CA21D5BBBF0043CE5A /* Main.storyboard in Resources */,
 				88EF130321D611160043CE5A /* 005.jpg in Resources */,
 				88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */,
-				88EF130121D611160043CE5A /* pageControlDot@2x.png in Resources */,
 				88D4C3A221D72EBF0032D826 /* timg4.jpeg in Resources */,
-				88EF130221D611160043CE5A /* pageControlCurrentDot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,16 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5943328322CDD0130053674A /* MSPageControl.m in Sources */,
 				88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */,
 				88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */,
 				88EF12C721D5BBBF0043CE5A /* ViewController.m in Sources */,
 				88EF12D221D5BBC50043CE5A /* main.m in Sources */,
 				88EF12C421D5BBBF0043CE5A /* AppDelegate.m in Sources */,
-				88EF12DD21D5BBE70043CE5A /* MSAnimatedDotView.m in Sources */,
-				88EF12F221D5C54D0043CE5A /* MSExampleDotView.m in Sources */,
 				88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */,
 				88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */,
-				88EF12DE21D5BBE70043CE5A /* MSPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,13 +425,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAWCVDY3ZB;
 				INFOPLIST_FILE = MSCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turbur.MSCycleScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,13 +444,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAWCVDY3ZB;
 				INFOPLIST_FILE = MSCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turbur.MSCycleScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -10,7 +10,6 @@
 #import "MSCycleScrollView.h"
 #import "CustomCollectionViewCell.h"
 #import "UIImageView+WebCache.h"
-#import "MSExampleDotView.h"
 
 @interface ViewController () <MSCycleScrollViewDelegate>
 
@@ -28,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 800);
+    demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 1500);
     [self.view addSubview:demoContainerView];
     
     self.title = @"轮播Demo";
@@ -76,19 +75,23 @@
     // 本地加载 --- 创建不带标题的图片轮播器
     MSCycleScrollView *cycleScrollView5 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 190, w, 180) InfiniteLoop:YES locationImageNames:imageNames];
     cycleScrollView5.delegate = self;
-    cycleScrollView5.pageControlStyle = kMSPageContolStyleAnimated;
-    cycleScrollView5.pageDotColor = [UIColor redColor];
-    cycleScrollView5.currentPageDotColor = [UIColor darkGrayColor];
+    cycleScrollView5.pageDotColor = [UIColor blueColor];
+    cycleScrollView5.currentPageDotColor = [UIColor yellowColor];
+    cycleScrollView5.dotsIsSquare = YES;
+    cycleScrollView5.currentWidthMultiple = 5;
+//    cycleScrollView5.pageControlDotSize = CGSizeMake(6, 5);
     [demoContainerView addSubview:cycleScrollView5];
     
     // 网络加载 --- 创建带标题的图片轮播器
     MSCycleScrollView *cycleScrollView2 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 370, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    cycleScrollView2.pageControlStyle = kMSPageContolStyleCustomer;
+
     cycleScrollView2.pageControlAliment = kMSPageContolAlimentRight;
     cycleScrollView2.titles = titles;
-    cycleScrollView2.dotViewClass = [MSExampleDotView class];
+//    cycleScrollView2.spacingBetweenDots = 20;//jian
+    cycleScrollView2.currentWidthMultiple = 3;
+
     cycleScrollView2.pageControlDotSize = CGSizeMake(6, 6);
-    cycleScrollView2.spacingBetweenDots = 10;
+    cycleScrollView2.pageControlAnimation = MSPageControlAnimationSystem;
     [demoContainerView addSubview:cycleScrollView2];
     
     // --- 模拟加载延迟
@@ -107,10 +110,10 @@
     
     // 网络加载 --- 创建自定义图片的pageControlDot的图片轮播器
     MSCycleScrollView *cycleScrollView3 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 560, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    cycleScrollView3.currentPageDotImage = [UIImage imageNamed:@"pageControlCurrentDot"];
-    cycleScrollView3.pageDotImage = [UIImage imageNamed:@"pageControlDot"];
+    //如果设置了 currentPageDotImage 和 pageDotImage 则pageControlDotSize将失效
+    cycleScrollView3.currentPageDotImage = [UIImage imageNamed:@"Ktv_ic_share_qq"];
+    cycleScrollView3.pageDotImage = [UIImage imageNamed:@"Ktv_ic_share_weixin"];
     cycleScrollView3.imageUrls = imagesURLStrings;
-    
     [demoContainerView addSubview:cycleScrollView3];
     
     // >>>>>>>>>>>>>>>>>>>>>>>>> demo轮播图4 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -131,6 +134,33 @@
     [demoContainerView addSubview:cycleScrollView4];
     
 
+    MSCycleScrollView *cycleScrollView6 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 805, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    cycleScrollView6.imageUrls = imagesURLStrings;
+    cycleScrollView6.pageControlStyle = MSPageControlStyleNumber;
+    cycleScrollView6.pageControlDotSize = CGSizeMake(15, 15);
+    cycleScrollView6.pageControlBottomOffset = -5;
+    cycleScrollView6.pageDotColor = [UIColor redColor];
+    cycleScrollView6.currentPageDotColor = [UIColor blueColor];
+    cycleScrollView6.textFont =[UIFont systemFontOfSize:12 weight:UIFontWeightBold];
+    cycleScrollView6.textColor = [UIColor whiteColor];
+    cycleScrollView6.dotsIsSquare = YES;
+    cycleScrollView6.spacingBetweenDots = 20;
+    [demoContainerView addSubview:cycleScrollView6];
+    
+    
+    MSCycleScrollView *cycleScrollView7 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView6.frame) + 10, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    cycleScrollView7.imageUrls = imagesURLStrings;
+    cycleScrollView7.pageDotColor = [UIColor darkGrayColor];
+    cycleScrollView7.currentPageDotColor = [UIColor whiteColor];
+    cycleScrollView7.dotBorderWidth = 1;
+    cycleScrollView7.dotBorderColor = [UIColor redColor];
+    cycleScrollView7.currentDotBorderColor =[UIColor blueColor];
+    cycleScrollView7.currentDotBorderWidth = 1;
+    cycleScrollView7.dotsIsSquare = NO;
+    cycleScrollView7.pageControlDotSize = CGSizeMake(12, 12);
+    [demoContainerView addSubview:cycleScrollView7];
+    
+    
     //         --- 轮播时间间隔，默认1.0秒，可自定义
     //cycleScrollView.autoScrollTimeInterval = 4.0;
     
@@ -160,8 +190,7 @@
 
 #pragma mark - SDCycleScrollViewDelegate
 
-- (void)cycleScrollView:(MSCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
-{
+- (void)cycleScrollView:(MSCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     NSLog(@"---点击了第%ld张图片", (long)index);
     
     [self.navigationController pushViewController:[ViewController new] animated:YES];
