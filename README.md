@@ -2,21 +2,25 @@
 一款在SDCycleScrollView的基础上对PageControl的样式进行扩展的轮播图,可根据自己需求自定义PageControl的样式（包括小圆点+横线的样式）、颜色、图片、边框颜色、边框宽度、方形点或者圆形点、以及各点之间的间距大小等，定制样式多样化！欢迎大家使用,
 
 ---
-#### 最近工作比较忙，没有更新REAMD.md文件效果图，具体效果还请下载Demo运行查看
 
-#### 代码参考于一款优秀的轮播图框架：[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView.git)。也十分感谢[高少东(gsdios)](https://github.com/gsdios)作者。
+#### 代码参考于一款优秀的轮播图框架：[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView.git)! 感谢[高少东(gsdios)](https://github.com/gsdios)作者。
 
 ### 效果图展示:
-###### (请原谅电脑太卡，不能为大家上传gif图片难受！！！)
+
 <table>
 <tr>
 <th>默认样式</th>
-<th>默认动画样式</th>
+<th>BorderColor样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0572.jpg" width="320" height="180"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0568.jpg" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/systemPoint.gif" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/borderPoint.gif" width="320" height="180">
+<img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/dotsIsSquare.gif" width="320" height="180">
+</td>
+
 </tr>
+</tr>
+
 <tr>
 <th>自定义pageControl样式</th>
 <th>自定义图片样式 </th>

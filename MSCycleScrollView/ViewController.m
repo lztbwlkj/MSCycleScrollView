@@ -150,13 +150,13 @@
     
     MSCycleScrollView *cycleScrollView7 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView6.frame) + 10, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     cycleScrollView7.imageUrls = imagesURLStrings;
-    cycleScrollView7.pageDotColor = [UIColor darkGrayColor];
+    cycleScrollView7.pageDotColor = [UIColor lightGrayColor];
     cycleScrollView7.currentPageDotColor = [UIColor whiteColor];
     cycleScrollView7.dotBorderWidth = 1;
-    cycleScrollView7.dotBorderColor = [UIColor redColor];
-    cycleScrollView7.currentDotBorderColor =[UIColor blueColor];
-    cycleScrollView7.currentDotBorderWidth = 1;
-    cycleScrollView7.dotsIsSquare = NO;
+    cycleScrollView7.dotBorderColor = [UIColor whiteColor];
+//    cycleScrollView7.currentDotBorderColor =[UIColor whiteColor];
+//    cycleScrollView7.currentDotBorderWidth = 1;
+    cycleScrollView7.dotsIsSquare = YES;
     cycleScrollView7.pageControlDotSize = CGSizeMake(12, 12);
     [demoContainerView addSubview:cycleScrollView7];
     
