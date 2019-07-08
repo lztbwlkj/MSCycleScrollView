@@ -39,6 +39,7 @@
 </table>
 
 ### 更新记录：
+2019.07.08 -- v0.0.3：修复调用[makeScrollViewScrollToIndex:]方法出现异常问题；
 2019.07.04 -- v0.0.2：删除部分无用属性，重新调整PageControl
 ,增加更多PageControl的自定义属性；
 2018.12.29 -- v0.0.1:提交0.0.1版本，添加PageControl的自定义属性；
