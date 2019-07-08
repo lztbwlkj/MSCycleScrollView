@@ -103,6 +103,7 @@ NSString * const ID = @"MSCycleScrollViewCell";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 0;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowLayout.itemSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     _flowLayout = flowLayout;
     
     UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
@@ -411,10 +412,10 @@ NSString * const ID = @"MSCycleScrollViewCell";
     }
 }
     
-//- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
-//    self.backgroundImageView.contentMode = bannerImageViewContentMode;
-//    _bannerImageViewContentMode = bannerImageViewContentMode;
-//}
+- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
+    self.backgroundImageView.contentMode = bannerImageViewContentMode;
+    _bannerImageViewContentMode = bannerImageViewContentMode;
+}
 
 
     
@@ -516,14 +517,12 @@ NSString * const ID = @"MSCycleScrollViewCell";
     return (int)index % self.imagePathsGroup.count;
 }
 
-- (void)clearCache{
-    [[self class] clearImagesCache];
-}
-
-+ (void)clearImagesCache{
++ (void)clearCache{
     [[SDImageCache sharedImageCache] clearMemory];
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
 }
+
+
 
 #pragma mark - life circles
 
@@ -680,7 +679,6 @@ NSString * const ID = @"MSCycleScrollViewCell";
     if (!self.imagePathsGroup.count) return; // 解决清除timer时偶尔会出现的问题
     int itemIndex = [self currentIndex];
     int indexOnPageControl = [self pageControlIndexWithCurrentCellIndex:itemIndex];
-
     if ([self.pageControl isKindOfClass:[MSPageControl class]]) {
         MSPageControl *pageControl = (MSPageControl *)_pageControl;
         pageControl.currentPage = indexOnPageControl;
@@ -727,14 +725,18 @@ NSString * const ID = @"MSCycleScrollViewCell";
         [self invalidateTimer];
     }
     if (0 == _totalItemsCount) return;
-
-    [self scrollToIndex:(int)(_totalItemsCount * 0.5 + index)];
-
+    
+    int scrollIndex = (int)(_totalItemsCount * 0.5 + index);
+    if (!_infiniteLoop) {
+        scrollIndex = (int)index;
+    }
+    
+    [self scrollToIndex:scrollIndex];
+    
     if (self.autoScroll) {
         [self setupTimer];
     }
 }
-
 
 @end
 

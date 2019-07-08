@@ -81,6 +81,8 @@
     cycleScrollView5.currentWidthMultiple = 5;
 //    cycleScrollView5.pageControlDotSize = CGSizeMake(6, 5);
     [demoContainerView addSubview:cycleScrollView5];
+    //指定Index
+    [cycleScrollView5 makeScrollViewScrollToIndex:2];
     
     // 网络加载 --- 创建带标题的图片轮播器
     MSCycleScrollView *cycleScrollView2 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 370, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];

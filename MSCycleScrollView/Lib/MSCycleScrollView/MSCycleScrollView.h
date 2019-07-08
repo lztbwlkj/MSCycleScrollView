@@ -265,8 +265,6 @@ typedef enum {
  */
 @property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
 
-
-
 #pragma mark ================== 初始化方式 ==================
 
 /** */
@@ -311,14 +309,9 @@ typedef enum {
 #pragma mark ================== 清除缓存 ==================
 
 /**
- 清除图片缓存（此次升级后统一使用SDWebImage管理图片加载和缓存）
+ 清除图片缓存
  */
-+ (void)clearImagesCache;
-
-/**
- 清除图片缓存（兼容旧版本方法）
- */
-- (void)clearCache;
++ (void)clearCache;
 
 @end
 
