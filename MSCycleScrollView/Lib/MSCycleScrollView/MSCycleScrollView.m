@@ -628,9 +628,10 @@ NSString * const ID = @"MSCycleScrollViewCell";
 
     NSString *imagePath = self.imagePathsGroup[itemIndex];
 
+   
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[imagePath ms_UTF8String]] placeholderImage:self.placeholderImage];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
             if (!image) {
@@ -670,6 +671,9 @@ NSString * const ID = @"MSCycleScrollViewCell";
         self.clickItemOperationBlock([self pageControlIndexWithCurrentCellIndex:indexPath.item]);
     }
 }
+
+
+
 
 
 #pragma mark - UIScrollViewDelegate
@@ -741,3 +745,16 @@ NSString * const ID = @"MSCycleScrollViewCell";
 @end
 
 
+@implementation NSString (MSExtentions)
+//处理URL已转义的%等符号时,又会再次转义而导致错误
+-(NSString *)ms_UTF8String {
+    NSLog(@"转译前--->> %@",self);
+    NSMutableCharacterSet *allowed = [NSMutableCharacterSet alphanumericCharacterSet];
+    [allowed addCharactersInString: @"!$&'()*+,-./:;=?@_~%#[]"];
+    NSString *encodeString = [self stringByAddingPercentEncodingWithAllowedCharacters: allowed];
+    NSLog(@"转译后--->> %@",encodeString);
+    return encodeString;
+
+}
+
+@end

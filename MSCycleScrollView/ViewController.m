@@ -34,18 +34,18 @@
     
     
     // 情景一：采用本地图片实现
-    NSArray *imageNames = @[@"timg1.jpeg",
-                            @"timg2.jpeg",
-                            @"timg3.jpeg",
-                            @"timg4.jpeg",
-                            @"timg7" // 本地图片请填写全名
+    NSArray *imageNames = @[@"timg5.jpeg",
+                            @"timg6.jpeg",
+                            @"timg7.jpeg",
+                            @"timg8.jpeg",
+                            @"timg9.jpeg" // 本地图片请填写全名
                             ];
-    
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
+                                  @"https://weiliicimg9.pstatp.com/weili/l/378983035183038486.webp",
+                                  @"https://icweiliimg1.pstatp.com/weili/l/哈啊446936813792919821.webp",
+                                  @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562577371120&di=6b68ad41c6d78af64a3845833def95d8&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F203fb80e7bec54e7f0e0839fb7389b504fc26a27.jpg",
+                                  @"https://weiliicimg9.pstatp.com/weili/l/454268675154510337.webp",
                                   ];
     _imagesURLStrings = imagesURLStrings;
     
@@ -54,7 +54,7 @@
                         @"disableScrollGesture可以设置禁止拖动",
                         @"感谢您的支持，如果下载的",
                         @"如果代码在使用过程中出现问题",
-                        @"您可以发邮件到lztbwlkj@gmail.com"
+                        @"您可以发邮件到lztbwlkj@gmail.com",
                         @"或者您可以issues"
                         ];
     
@@ -78,7 +78,7 @@
     cycleScrollView5.pageDotColor = [UIColor blueColor];
     cycleScrollView5.currentPageDotColor = [UIColor yellowColor];
     cycleScrollView5.dotsIsSquare = YES;
-    cycleScrollView5.currentWidthMultiple = 5;
+    cycleScrollView5.currentWidthMultiple = 3;
 //    cycleScrollView5.pageControlDotSize = CGSizeMake(6, 5);
     [demoContainerView addSubview:cycleScrollView5];
     //指定Index

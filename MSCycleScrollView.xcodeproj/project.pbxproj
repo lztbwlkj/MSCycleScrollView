@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593CF54222D3179A002E9520 /* timg5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF53D22D3179A002E9520 /* timg5.jpeg */; };
+		593CF54322D3179A002E9520 /* timg8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF53E22D3179A002E9520 /* timg8.jpeg */; };
+		593CF54422D3179A002E9520 /* timg9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF53F22D3179A002E9520 /* timg9.jpeg */; };
+		593CF54522D3179A002E9520 /* timg6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54022D3179A002E9520 /* timg6.jpeg */; };
+		593CF54622D3179A002E9520 /* timg7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54122D3179A002E9520 /* timg7.jpeg */; };
 		5943328322CDD0130053674A /* MSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5943328222CDD0120053674A /* MSPageControl.m */; };
 		88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39B21D72EBE0032D826 /* timg2.jpeg */; };
 		88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39C21D72EBE0032D826 /* timg1.jpeg */; };
@@ -22,14 +27,17 @@
 		88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */; };
 		88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */; };
 		88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */; };
-		88EF130321D611160043CE5A /* 005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12F921D611160043CE5A /* 005.jpg */; };
-		88EF130A21D611160043CE5A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EF130021D611160043CE5A /* placeholder.png */; };
 		C2EE8BF437CB100D5D1A6268 /* libPods-MSCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02AD4E59D6F3708B27831FB0 /* Pods-MSCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.release.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
 		074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		593CF53D22D3179A002E9520 /* timg5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg5.jpeg; path = images/timg5.jpeg; sourceTree = SOURCE_ROOT; };
+		593CF53E22D3179A002E9520 /* timg8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg8.jpeg; path = images/timg8.jpeg; sourceTree = SOURCE_ROOT; };
+		593CF53F22D3179A002E9520 /* timg9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg9.jpeg; path = images/timg9.jpeg; sourceTree = SOURCE_ROOT; };
+		593CF54022D3179A002E9520 /* timg6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg6.jpeg; path = images/timg6.jpeg; sourceTree = SOURCE_ROOT; };
+		593CF54122D3179A002E9520 /* timg7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg7.jpeg; path = images/timg7.jpeg; sourceTree = SOURCE_ROOT; };
 		5943328122CDD0120053674A /* MSPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPageControl.h; sourceTree = "<group>"; };
 		5943328222CDD0120053674A /* MSPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPageControl.m; sourceTree = "<group>"; };
 		694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,8 +63,6 @@
 		88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
 		88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
-		88EF12F921D611160043CE5A /* 005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpg; sourceTree = "<group>"; };
-		88EF130021D611160043CE5A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +149,15 @@
 		88EF12F621D6110A0043CE5A /* Resuouce */ = {
 			isa = PBXGroup;
 			children = (
-				88EF12F921D611160043CE5A /* 005.jpg */,
+				593CF53D22D3179A002E9520 /* timg5.jpeg */,
+				593CF54022D3179A002E9520 /* timg6.jpeg */,
+				593CF54122D3179A002E9520 /* timg7.jpeg */,
+				593CF53E22D3179A002E9520 /* timg8.jpeg */,
+				593CF53F22D3179A002E9520 /* timg9.jpeg */,
 				88D4C39C21D72EBE0032D826 /* timg1.jpeg */,
 				88D4C39B21D72EBE0032D826 /* timg2.jpeg */,
 				88D4C39D21D72EBF0032D826 /* timg3.jpeg */,
 				88D4C39E21D72EBF0032D826 /* timg4.jpeg */,
-				88EF130021D611160043CE5A /* placeholder.png */,
 			);
 			path = Resuouce;
 			sourceTree = "<group>";
@@ -228,13 +237,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593CF54622D3179A002E9520 /* timg7.jpeg in Resources */,
 				88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */,
+				593CF54222D3179A002E9520 /* timg5.jpeg in Resources */,
+				593CF54422D3179A002E9520 /* timg9.jpeg in Resources */,
 				88D4C3A121D72EBF0032D826 /* timg3.jpeg in Resources */,
-				88EF130A21D611160043CE5A /* placeholder.png in Resources */,
+				593CF54322D3179A002E9520 /* timg8.jpeg in Resources */,
+				593CF54522D3179A002E9520 /* timg6.jpeg in Resources */,
 				88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */,
 				88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */,
 				88EF12CA21D5BBBF0043CE5A /* Main.storyboard in Resources */,
-				88EF130321D611160043CE5A /* 005.jpg in Resources */,
 				88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */,
 				88D4C3A221D72EBF0032D826 /* timg4.jpeg in Resources */,
 			);

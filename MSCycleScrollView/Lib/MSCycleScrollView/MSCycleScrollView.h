@@ -315,4 +315,10 @@ typedef enum {
 
 @end
 
+
+@interface NSString (MSExtentions)
+-(NSString *)ms_UTF8String;
+@end
+
+
 NS_ASSUME_NONNULL_END
