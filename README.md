@@ -10,36 +10,39 @@
 <table>
 <tr>
 <th>默认样式</th>
-<th>BorderColor样式</th>
+<th>带边框圆形点样式</th>
+<th>带边框方形点样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/systemPoint.gif" width="320" height="180"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/borderPoint.gif" width="320" height="180">
-<img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/dotsIsSquare.gif" width="320" height="180">
-</td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/systemPoint.gif" width="300" height="130"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/borderPoint.gif" width="300" height="130"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/dotsIsSquare.gif" width="300" height="130"></td>
+</tr>
+</tr>
 
-</tr>
-</tr>
-
 <tr>
-<th>自定义pageControl样式</th>
-<th>自定义图片样式 </th>
+<th>横线+小圆点样式</th>
+<th>横线+小方点样式</th>
+<th>自定义图片样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0569.jpg" width="320" height="180"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0570.jpg" width="320" height="180"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengAndpoint.gif" width="300" height="130"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengPoint2.gif" width="300" height="130"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/imageDots.gif" width="300" height="130"></td>
 </tr> 
 <tr>
 <th>只显示文本样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/IMG_0571.jpg" width="350" height="100"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/text.gif" width="300" height="80"></td>
 </tr> 
 </table>
 
 ### 更新记录：
-2018.12.29 -- v0.0.1:提交0.0.1版本，添加PageControl的自定义属性;2019
-2019.07.04  -  v0.0.2：删除部分无用属性，增加更多PageControl的自定义属性，
+2019.07.04 -- v0.0.2：删除部分无用属性，重新调整PageControl
+,增加更多PageControl的自定义属性；
+2018.12.29 -- v0.0.1:提交0.0.1版本，添加PageControl的自定义属性；
+
 
 ## 集成方式
 
@@ -47,7 +50,7 @@
 
 ```objc
 
-  pod 'MSCycleScrollView','~>0.0.1'
+  pod 'MSCycleScrollView','~>0.0.2'
 
 ```
 ### 一、手动集成
@@ -63,13 +66,8 @@
 
 
 ## 注意事项
-#### 1、关于PageControl的样式自定义需要创建UIView继承 "MSAbstractDotView" 实现,具体方式可查看Demo中的"MSExampleDotView"类
 
-```objc
-- (void)changeActivityState:(BOOL)active dotView:(nonnull MSAbstractDotView *)dotView pageDotSize:(CGSize)pageDotSize;
-```
-
-#### 2、在使用了自定义PageControl的自定义样式后，部分PageControl的属性将失效，比如颜色，自定义图片等；
+#### 1、在使用了PageControl的自定义图片样式后，pageDotsSize属性将失效；
 
 
-## 你的Star是我更新的动力，使用过程如果有什么问题或者有什么新的建议，可以[issues](https://github.com/lztbwlkj/MSCycleScrollView/issues/new),我会及时回复大家！
+## 如果觉得好用麻烦动个手指给个Star，你的Star是我更新的动力，使用过程如果有什么问题可以[issues](https://github.com/lztbwlkj/MSCycleScrollView/issues/new),我会及时回复大家！
