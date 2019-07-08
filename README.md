@@ -31,9 +31,11 @@
 <td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/imageDots.gif" width="330" height="180"></td>
 </tr> 
 <tr>
+<th>数字文本样式</th>
 <th>只显示文本样式</th>
 </tr>
 <tr>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/numberPoint.gif" width="330" height="180"></td>
 <td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/text.gif" width="300" height="160"></td>
 </tr> 
 </table>

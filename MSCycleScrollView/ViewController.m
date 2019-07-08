@@ -43,7 +43,7 @@
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
                                   @"https://weiliicimg9.pstatp.com/weili/l/378983035183038486.webp",
-                                  @"https://icweiliimg1.pstatp.com/weili/l/哈啊446936813792919821.webp",
+                                  @"https://icweiliimg1.pstatp.com/weili/l/446936813792919821.webp",
                                   @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562577371120&di=6b68ad41c6d78af64a3845833def95d8&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F203fb80e7bec54e7f0e0839fb7389b504fc26a27.jpg",
                                   @"https://weiliicimg9.pstatp.com/weili/l/454268675154510337.webp",
                                   ];

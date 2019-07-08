@@ -748,13 +748,9 @@ NSString * const ID = @"MSCycleScrollViewCell";
 @implementation NSString (MSExtentions)
 //处理URL已转义的%等符号时,又会再次转义而导致错误
 -(NSString *)ms_UTF8String {
-    NSLog(@"转译前--->> %@",self);
     NSMutableCharacterSet *allowed = [NSMutableCharacterSet alphanumericCharacterSet];
     [allowed addCharactersInString: @"!$&'()*+,-./:;=?@_~%#[]"];
-    NSString *encodeString = [self stringByAddingPercentEncodingWithAllowedCharacters: allowed];
-    NSLog(@"转译后--->> %@",encodeString);
-    return encodeString;
-
+    return [self stringByAddingPercentEncodingWithAllowedCharacters: allowed];
 }
 
 @end
