@@ -26,15 +26,15 @@
 <th>自定义图片样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengAndpoint.gif" width="300" height="130"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengPoint2.gif" width="300" height="130"></td>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/imageDots.gif" width="300" height="130"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengAndpoint.gif" width="320" height="160"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/hengPoint2.gif" width="320" height="160"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/imageDots.gif" width="320" height="160"></td>
 </tr> 
 <tr>
 <th>只显示文本样式</th>
 </tr>
 <tr>
-<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/text.gif" width="300" height="80"></td>
+<td><img src="https://github.com/lztbwlkj/MSCycleScrollView/blob/master/images/text.gif" width="300" height="100"></td>
 </tr> 
 </table>
 
