@@ -76,7 +76,7 @@ typedef void(^didSelectPageAtIndex)(MSPageControl *pageControl,NSInteger index);
 @property(nonatomic, assign) NSInteger currentPage;
 
 /**
- 点的大小
+ 点的大小 设置了pagecControl图片属性 pageDotSize将失效
  */
 @property(nonatomic, assign) CGSize pageDotSize;
 
@@ -113,6 +113,7 @@ typedef void(^didSelectPageAtIndex)(MSPageControl *pageControl,NSInteger index);
 /**
  当前选中点宽度与未选中点的宽度的倍数 默认是1
  * 计算方法 pageDotSize.width = pageDotSize.width * currentWidthMultiple；
+ * 设置了pagecControl图片属性 currentWidthMultiple将失效
  */
 @property(nonatomic, assign) CGFloat currentWidthMultiple;
 
@@ -145,6 +146,7 @@ typedef void(^didSelectPageAtIndex)(MSPageControl *pageControl,NSInteger index);
  让控制知道是否应该通过保持中心变大，或者只是变长（右侧扩张）。Default is YES.。
  */
 @property (nonatomic) BOOL shouldResizeFromCenter;
+
 
 
 - (CGSize)sizeForNumberOfPages:(NSInteger)pageCount;

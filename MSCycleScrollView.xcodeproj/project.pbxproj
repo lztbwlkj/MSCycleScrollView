@@ -12,7 +12,6 @@
 		593CF54422D3179A002E9520 /* timg9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF53F22D3179A002E9520 /* timg9.jpeg */; };
 		593CF54522D3179A002E9520 /* timg6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54022D3179A002E9520 /* timg6.jpeg */; };
 		593CF54622D3179A002E9520 /* timg7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54122D3179A002E9520 /* timg7.jpeg */; };
-		5943328322CDD0130053674A /* MSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5943328222CDD0120053674A /* MSPageControl.m */; };
 		88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39B21D72EBE0032D826 /* timg2.jpeg */; };
 		88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39C21D72EBE0032D826 /* timg1.jpeg */; };
 		88D4C3A121D72EBF0032D826 /* timg3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39D21D72EBF0032D826 /* timg3.jpeg */; };
@@ -38,8 +37,6 @@
 		593CF53F22D3179A002E9520 /* timg9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg9.jpeg; path = images/timg9.jpeg; sourceTree = SOURCE_ROOT; };
 		593CF54022D3179A002E9520 /* timg6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg6.jpeg; path = images/timg6.jpeg; sourceTree = SOURCE_ROOT; };
 		593CF54122D3179A002E9520 /* timg7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg7.jpeg; path = images/timg7.jpeg; sourceTree = SOURCE_ROOT; };
-		5943328122CDD0120053674A /* MSPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPageControl.h; sourceTree = "<group>"; };
-		5943328222CDD0120053674A /* MSPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPageControl.m; sourceTree = "<group>"; };
 		694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		88D4C39B21D72EBE0032D826 /* timg2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg2.jpeg; path = images/timg2.jpeg; sourceTree = SOURCE_ROOT; };
 		88D4C39C21D72EBE0032D826 /* timg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg1.jpeg; path = images/timg1.jpeg; sourceTree = SOURCE_ROOT; };
@@ -115,19 +112,9 @@
 			path = MSCycleScrollView;
 			sourceTree = "<group>";
 		};
-		88EF12D821D5BBD40043CE5A /* PageControl */ = {
-			isa = PBXGroup;
-			children = (
-				5943328122CDD0120053674A /* MSPageControl.h */,
-				5943328222CDD0120053674A /* MSPageControl.m */,
-			);
-			path = PageControl;
-			sourceTree = "<group>";
-		};
 		88EF12DF21D5BBFD0043CE5A /* MSCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				88EF12D821D5BBD40043CE5A /* PageControl */,
 				88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */,
 				88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */,
 				88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */,
@@ -149,15 +136,15 @@
 		88EF12F621D6110A0043CE5A /* Resuouce */ = {
 			isa = PBXGroup;
 			children = (
+				88D4C39C21D72EBE0032D826 /* timg1.jpeg */,
+				88D4C39B21D72EBE0032D826 /* timg2.jpeg */,
+				88D4C39D21D72EBF0032D826 /* timg3.jpeg */,
+				88D4C39E21D72EBF0032D826 /* timg4.jpeg */,
 				593CF53D22D3179A002E9520 /* timg5.jpeg */,
 				593CF54022D3179A002E9520 /* timg6.jpeg */,
 				593CF54122D3179A002E9520 /* timg7.jpeg */,
 				593CF53E22D3179A002E9520 /* timg8.jpeg */,
 				593CF53F22D3179A002E9520 /* timg9.jpeg */,
-				88D4C39C21D72EBE0032D826 /* timg1.jpeg */,
-				88D4C39B21D72EBE0032D826 /* timg2.jpeg */,
-				88D4C39D21D72EBF0032D826 /* timg3.jpeg */,
-				88D4C39E21D72EBF0032D826 /* timg4.jpeg */,
 			);
 			path = Resuouce;
 			sourceTree = "<group>";
@@ -284,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5943328322CDD0130053674A /* MSPageControl.m in Sources */,
 				88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */,
 				88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */,
 				88EF12C721D5BBBF0043CE5A /* ViewController.m in Sources */,

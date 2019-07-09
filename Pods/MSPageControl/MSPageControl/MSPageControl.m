@@ -83,7 +83,7 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
     self.numberOfPages          = kDefaultNumberOfPages;//默认点的间距为8
     self.currentPage            = kDefaultCurrentPage;//默认当前页数为第一页
     self.hidesForSinglePage     = kDefaultHideForSinglePage;//如果只有一个页面 默认是不隐藏
-    self.dotColor = [UIColor lightGrayColor];//默认未选中点的颜色为白色，透明度50%
+    self.dotColor = [UIColor colorWithWhite:1 alpha:0.5];//默认未选中点的颜色为白色，透明度50%
     self.currentDotColor = [UIColor whiteColor];//默认选中点的颜色为白色
     self.pageDotSize = kDefaultDotSize;//默认点的宽高分别为8
     self.currentWidthMultiple = kDefaultCurrentWidthMultiple;//当前选中点宽度与未选中点的宽度的倍数，默认为1倍
@@ -148,7 +148,9 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
 
 -(void)setPageDotSize:(CGSize)pageDotSize{
     _pageDotSize = pageDotSize;
-    
+//    if (self.dotImage && self.currentDotImage) {
+//        _pageDotSize = self.dotImage.size;
+//    }
     [self resetDotViews];
 }
 
@@ -200,6 +202,7 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
 -(void)setCurrentDotBorderWidth:(CGFloat)currentDotBorderWidth{
     if (_currentDotBorderWidth == currentDotBorderWidth) return;
     _currentDotBorderWidth = currentDotBorderWidth;
+   
     [self resetDotViews];
 }
 
@@ -207,7 +210,6 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
     if (_dotBorderColor == dotBorderColor) return;
     _dotBorderColor = dotBorderColor;
     [self resetDotViews];
-
 }
 
 -(void)setCurrentDotBorderColor:(UIColor *)currentDotBorderColor{
@@ -233,11 +235,6 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
 -(void)setPageControlStyle:(MSPageControlStyle)pageControlStyle{
     if (_pageControlStyle == pageControlStyle) return;
     _pageControlStyle = pageControlStyle;
-    
-    
-    if (_currentWidthMultiple != 1) {
-        _currentWidthMultiple = 1;
-    }
     [self resetDotViews];
 }
 
@@ -265,6 +262,10 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
     for (UIView *dotView in self.dots) {
         [dotView removeFromSuperview];
     }
+    if (self.dotImage || self.currentDotImage) {
+        _currentWidthMultiple = 1;
+        _pageDotSize = self.currentDotImage.size;
+    }
     
     [self.dots removeAllObjects];
     [self updateDots];
@@ -273,10 +274,6 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
 -(void)updateDots{
     if (self.numberOfPages == 0) {
         return;
-    }
-    
-    if (self.dotImage && self.currentDotImage) {
-        _pageDotSize = self.dotImage.size;
     }
     
     CGFloat startX = 0.0, startY = 0.0;
@@ -308,7 +305,7 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
                 dotView.layer.cornerRadius = self.dotsIsSquare ? 0 : self.pageDotSize.height / 2;
             }else{
                 dotView = [[UIImageView alloc] initWithImage:self.dotImage];
-                if (self.currentDotImage) {
+                if (self.dotImage) {
                     dotView.backgroundColor = [UIColor clearColor];
                 }else{
                     dotView.backgroundColor = self.dotColor;
@@ -452,7 +449,6 @@ static NSInteger const kDefaultCurrentWidthMultiple = 1;
     if (!_dots) {
         _dots = [[NSMutableArray alloc] init];
     }
-    
     return _dots;
 }
 

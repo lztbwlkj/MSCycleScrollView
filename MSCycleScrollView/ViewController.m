@@ -38,7 +38,7 @@
                             @"timg6.jpeg",
                             @"timg7.jpeg",
                             @"timg8.jpeg",
-                            @"timg9.jpeg" // 本地图片请填写全名
+                            @"timg9.jpeg",// 本地图片请填写全名
                             ];
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
@@ -208,29 +208,6 @@
  }
  
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 不需要自定义轮播cell的请忽略下面的代理方法
 
