@@ -123,7 +123,7 @@
     
     // 网络加载 --- 创建只上下滚动展示文字的轮播器
     // 由于模拟器的渲染问题，如果发现轮播时有一条线不必处理，模拟器放大到100%或者真机调试是不会出现那条线的
-    MSCycleScrollView *cycleScrollView4 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 750, w, 40) delegate:self placeholderImage:nil];
+    MSCycleScrollView *cycleScrollView4 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, 750, w, 40) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     cycleScrollView4.scrollDirection = UICollectionViewScrollDirectionVertical;
     cycleScrollView4.onlyDisplayText = YES;
     cycleScrollView4.autoScrollTimeInterval = 3;

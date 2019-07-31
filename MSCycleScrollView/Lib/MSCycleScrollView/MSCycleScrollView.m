@@ -169,7 +169,7 @@ NSString * const ID = @"MSCycleScrollViewCell";
     _placeholderImage = placeholderImage;
     
     if (!self.backgroundImageView) {
-        UIImageView *bgImageView = [UIImageView new];
+        UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.mainView.bounds];
         bgImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self insertSubview:bgImageView belowSubview:self.mainView];
         self.backgroundImageView = bgImageView;
