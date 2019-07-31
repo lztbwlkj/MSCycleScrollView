@@ -25,4 +25,5 @@ spec.source_files  = "MSCycleScrollView/Lib/MSCycleScrollView/**/*"
 spec.requires_arc = true
 spec.dependency 'SDWebImage'
 spec.dependency 'MSPageControl'
+spec.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 end
