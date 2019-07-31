@@ -279,7 +279,7 @@ typedef enum {
 +(instancetype)cycleViewWithFrame:(CGRect)frame delegate:(id<MSCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
 
 /**
- 本地图片轮播初始化方式2
+ 本地图片轮播初始化方式
 
  @param frame frame
  @param infiniteLoop 是否无限循环
@@ -288,6 +288,15 @@ typedef enum {
  */
 + (instancetype)cycleViewWithFrame:(CGRect)frame InfiniteLoop:(BOOL)infiniteLoop locationImageNames:(NSArray *)imageNames;
 
+
+/**
+ 网络图片初始化方法
+
+ @param frame frame
+ @param imageUrls 网络图片地址数组
+ @return MSCycleScrollView
+ */
++ (instancetype)cycleViewWithFrame:(CGRect)frame imageUrls:(NSArray *)imageUrls;
 
 /**
  可以调用此方法手动控制滚动到哪一个index

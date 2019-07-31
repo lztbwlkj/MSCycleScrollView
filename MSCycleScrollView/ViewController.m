@@ -94,10 +94,11 @@
 
     cycleScrollView2.pageControlDotSize = CGSizeMake(6, 6);
     cycleScrollView2.pageControlAnimation = MSPageControlAnimationSystem;
+    cycleScrollView2.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
     [demoContainerView addSubview:cycleScrollView2];
     
     // --- 模拟加载延迟
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         cycleScrollView2.imageUrls = imagesURLStrings;
     });
     
@@ -148,20 +149,22 @@
     cycleScrollView6.dotsIsSquare = YES;
     cycleScrollView6.spacingBetweenDots = 20;
     [demoContainerView addSubview:cycleScrollView6];
-    
+    cycleScrollView6.imageUrls = imagesURLStrings;
+
     
     MSCycleScrollView *cycleScrollView7 = [MSCycleScrollView cycleViewWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView6.frame) + 10, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    cycleScrollView7.imageUrls = imagesURLStrings;
-    cycleScrollView7.pageDotColor = [UIColor lightGrayColor];
-    cycleScrollView7.currentPageDotColor = [UIColor whiteColor];
+    cycleScrollView7.pageDotColor = [UIColor redColor];
+    cycleScrollView7.currentPageDotColor = [UIColor purpleColor];
     cycleScrollView7.dotBorderWidth = 1;
     cycleScrollView7.dotBorderColor = [UIColor whiteColor];
-//    cycleScrollView7.currentDotBorderColor =[UIColor whiteColor];
-//    cycleScrollView7.currentDotBorderWidth = 1;
+    cycleScrollView7.currentDotBorderColor =[UIColor blueColor];
+    cycleScrollView7.currentDotBorderWidth = 2;
     cycleScrollView7.dotsIsSquare = YES;
-    cycleScrollView7.pageControlDotSize = CGSizeMake(12, 12);
+    cycleScrollView7.pageControlDotSize = CGSizeMake(8, 8);
     [demoContainerView addSubview:cycleScrollView7];
     
+    cycleScrollView7.imageUrls = imagesURLStrings;
+
     
     //         --- 轮播时间间隔，默认1.0秒，可自定义
     //cycleScrollView.autoScrollTimeInterval = 4.0;

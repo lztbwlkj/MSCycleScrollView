@@ -9,52 +9,52 @@
 #import "UIView+MSExtension.h"
 
 @implementation UIView (MSExtension)
-- (CGFloat)sd_height
+- (CGFloat)ms_height
 {
     return self.frame.size.height;
 }
 
-- (void)setSd_height:(CGFloat)sd_height
+- (void)setMs_height:(CGFloat)ms_height
 {
     CGRect temp = self.frame;
-    temp.size.height = sd_height;
+    temp.size.height = ms_height;
     self.frame = temp;
 }
 
-- (CGFloat)sd_width
+- (CGFloat)ms_width
 {
     return self.frame.size.width;
 }
 
-- (void)setSd_width:(CGFloat)sd_width
+- (void)setMs_width:(CGFloat)ms_width
 {
     CGRect temp = self.frame;
-    temp.size.width = sd_width;
+    temp.size.width = ms_width;
     self.frame = temp;
 }
 
 
-- (CGFloat)sd_y
+- (CGFloat)ms_y
 {
     return self.frame.origin.y;
 }
 
-- (void)setSd_y:(CGFloat)sd_y
+- (void)setMs_y:(CGFloat)ms_y
 {
     CGRect temp = self.frame;
-    temp.origin.y = sd_y;
+    temp.origin.y = ms_y;
     self.frame = temp;
 }
 
-- (CGFloat)sd_x
+- (CGFloat)ms_x
 {
     return self.frame.origin.x;
 }
 
-- (void)setSd_x:(CGFloat)sd_x
+- (void)setMs_x:(CGFloat)ms_x
 {
     CGRect temp = self.frame;
-    temp.origin.x = sd_x;
+    temp.origin.x = ms_x;
     self.frame = temp;
 }
 

@@ -94,10 +94,10 @@
      
     } else {
         _imageView.frame = self.bounds;
-        CGFloat titleLabelW = self.sd_width;
+        CGFloat titleLabelW = self.ms_width;
         CGFloat titleLabelH = _titleLabelHeight;
         CGFloat titleLabelX = 0;
-        CGFloat titleLabelY = self.sd_height - titleLabelH;
+        CGFloat titleLabelY = self.ms_height - titleLabelH;
         _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
     }
 }

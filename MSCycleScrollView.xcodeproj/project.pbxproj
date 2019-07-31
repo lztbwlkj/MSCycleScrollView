@@ -12,6 +12,9 @@
 		593CF54422D3179A002E9520 /* timg9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF53F22D3179A002E9520 /* timg9.jpeg */; };
 		593CF54522D3179A002E9520 /* timg6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54022D3179A002E9520 /* timg6.jpeg */; };
 		593CF54622D3179A002E9520 /* timg7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 593CF54122D3179A002E9520 /* timg7.jpeg */; };
+		596B5D9022F12CD5001FDBEF /* MSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596B5D8C22F12CD5001FDBEF /* MSCycleScrollView.m */; };
+		596B5D9122F12CD5001FDBEF /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 596B5D8D22F12CD5001FDBEF /* UIView+MSExtension.m */; };
+		596B5D9222F12CD5001FDBEF /* MSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 596B5D8E22F12CD5001FDBEF /* MSCollectionViewCell.m */; };
 		88D4C39F21D72EBF0032D826 /* timg2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39B21D72EBE0032D826 /* timg2.jpeg */; };
 		88D4C3A021D72EBF0032D826 /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39C21D72EBE0032D826 /* timg1.jpeg */; };
 		88D4C3A121D72EBF0032D826 /* timg3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 88D4C39D21D72EBF0032D826 /* timg3.jpeg */; };
@@ -22,9 +25,6 @@
 		88EF12CC21D5BBC50043CE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CB21D5BBC50043CE5A /* Assets.xcassets */; };
 		88EF12CF21D5BBC50043CE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EF12CD21D5BBC50043CE5A /* LaunchScreen.storyboard */; };
 		88EF12D221D5BBC50043CE5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12D121D5BBC50043CE5A /* main.m */; };
-		88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */; };
-		88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */; };
-		88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */; };
 		88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */; };
 		C2EE8BF437CB100D5D1A6268 /* libPods-MSCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074FC735763B0604149CBB1C /* libPods-MSCycleScrollView.a */; };
 /* End PBXBuildFile section */
@@ -37,6 +37,12 @@
 		593CF53F22D3179A002E9520 /* timg9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg9.jpeg; path = images/timg9.jpeg; sourceTree = SOURCE_ROOT; };
 		593CF54022D3179A002E9520 /* timg6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg6.jpeg; path = images/timg6.jpeg; sourceTree = SOURCE_ROOT; };
 		593CF54122D3179A002E9520 /* timg7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg7.jpeg; path = images/timg7.jpeg; sourceTree = SOURCE_ROOT; };
+		596B5D8A22F12CD5001FDBEF /* MSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCell.h; sourceTree = "<group>"; };
+		596B5D8B22F12CD5001FDBEF /* UIView+MSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MSExtension.h"; sourceTree = "<group>"; };
+		596B5D8C22F12CD5001FDBEF /* MSCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCycleScrollView.m; sourceTree = "<group>"; };
+		596B5D8D22F12CD5001FDBEF /* UIView+MSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
+		596B5D8E22F12CD5001FDBEF /* MSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCollectionViewCell.m; sourceTree = "<group>"; };
+		596B5D8F22F12CD5001FDBEF /* MSCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCycleScrollView.h; sourceTree = "<group>"; };
 		694FA4504156D4CCA8A687B8 /* Pods-MSCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSCycleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-MSCycleScrollView/Pods-MSCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		88D4C39B21D72EBE0032D826 /* timg2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg2.jpeg; path = images/timg2.jpeg; sourceTree = SOURCE_ROOT; };
 		88D4C39C21D72EBE0032D826 /* timg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timg1.jpeg; path = images/timg1.jpeg; sourceTree = SOURCE_ROOT; };
@@ -52,12 +58,6 @@
 		88EF12CE21D5BBC50043CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88EF12D021D5BBC50043CE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EF12D121D5BBC50043CE5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCycleScrollView.h; sourceTree = "<group>"; };
-		88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCycleScrollView.m; sourceTree = "<group>"; };
-		88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCell.h; sourceTree = "<group>"; };
-		88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionViewCell.m; sourceTree = "<group>"; };
-		88EF12EA21D5BD6A0043CE5A /* UIView+MSExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MSExtension.h"; sourceTree = "<group>"; };
-		88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
 		88EF12ED21D5C4E60043CE5A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		88EF12EE21D5C4E60043CE5A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +74,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		596B5D8822F12CD5001FDBEF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				596B5D8922F12CD5001FDBEF /* MSCycleScrollView */,
+			);
+			name = Lib;
+			path = ../../../../../System/Volumes/Data/Users/lztbwlkj/Desktop/MSCycleScrollView/MSCycleScrollView/Lib;
+			sourceTree = "<group>";
+		};
+		596B5D8922F12CD5001FDBEF /* MSCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				596B5D8F22F12CD5001FDBEF /* MSCycleScrollView.h */,
+				596B5D8C22F12CD5001FDBEF /* MSCycleScrollView.m */,
+				596B5D8A22F12CD5001FDBEF /* MSCollectionViewCell.h */,
+				596B5D8E22F12CD5001FDBEF /* MSCollectionViewCell.m */,
+				596B5D8B22F12CD5001FDBEF /* UIView+MSExtension.h */,
+				596B5D8D22F12CD5001FDBEF /* UIView+MSExtension.m */,
+			);
+			path = MSCycleScrollView;
+			sourceTree = "<group>";
+		};
 		88EF12B621D5BBBF0043CE5A = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +117,8 @@
 		88EF12C121D5BBBF0043CE5A /* MSCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				596B5D8822F12CD5001FDBEF /* Lib */,
 				88EF12F621D6110A0043CE5A /* Resuouce */,
-				88EF12E021D5BC0F0043CE5A /* Lib */,
 				88EF12C221D5BBBF0043CE5A /* AppDelegate.h */,
 				88EF12C321D5BBBF0043CE5A /* AppDelegate.m */,
 				88EF12C521D5BBBF0043CE5A /* ViewController.h */,
@@ -110,27 +132,6 @@
 				88EF12D121D5BBC50043CE5A /* main.m */,
 			);
 			path = MSCycleScrollView;
-			sourceTree = "<group>";
-		};
-		88EF12DF21D5BBFD0043CE5A /* MSCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				88EF12E121D5BC810043CE5A /* MSCycleScrollView.h */,
-				88EF12E221D5BC810043CE5A /* MSCycleScrollView.m */,
-				88EF12E421D5BCA30043CE5A /* MSCollectionViewCell.h */,
-				88EF12E521D5BCA30043CE5A /* MSCollectionViewCell.m */,
-				88EF12EA21D5BD6A0043CE5A /* UIView+MSExtension.h */,
-				88EF12EB21D5BD6A0043CE5A /* UIView+MSExtension.m */,
-			);
-			path = MSCycleScrollView;
-			sourceTree = "<group>";
-		};
-		88EF12E021D5BC0F0043CE5A /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				88EF12DF21D5BBFD0043CE5A /* MSCycleScrollView */,
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 		88EF12F621D6110A0043CE5A /* Resuouce */ = {
@@ -271,13 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EF12EC21D5BD6A0043CE5A /* UIView+MSExtension.m in Sources */,
-				88EF12E621D5BCA30043CE5A /* MSCollectionViewCell.m in Sources */,
+				596B5D9222F12CD5001FDBEF /* MSCollectionViewCell.m in Sources */,
+				596B5D9122F12CD5001FDBEF /* UIView+MSExtension.m in Sources */,
 				88EF12C721D5BBBF0043CE5A /* ViewController.m in Sources */,
+				596B5D9022F12CD5001FDBEF /* MSCycleScrollView.m in Sources */,
 				88EF12D221D5BBC50043CE5A /* main.m in Sources */,
 				88EF12C421D5BBBF0043CE5A /* AppDelegate.m in Sources */,
 				88EF12EF21D5C4E70043CE5A /* CustomCollectionViewCell.m in Sources */,
-				88EF12E321D5BC810043CE5A /* MSCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
