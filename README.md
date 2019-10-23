@@ -59,7 +59,7 @@
 
 ```
 ### 一、手动集成
-1. 下载Demo，将Demo中的MSCycleScrollView文件夹拖入所需工程中
+1. 下载Demo，将Demo中Lib目录下的MSCycleScrollView文件夹拖入所需工程中
 2. 在需要的文件下
 
 ```objc
