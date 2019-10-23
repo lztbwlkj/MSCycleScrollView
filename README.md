@@ -41,7 +41,7 @@
 </table>
 
 ### 更新记录：
-2019.07.31 -- v0.0.5：修改ImageUrl后设置导致PageControl属性无效的BUG；/n
+2019.07.31 -- v0.0.5：修改ImageUrl后设置导致PageControl属性无效的BUG；\n
 2019.07.09 -- v0.0.4：Pod添加MSPageControl的依赖库；
 2019.07.08 -- v0.0.3：修复调用[makeScrollViewScrollToIndex:]方法出现异常问题；
 2019.07.04 -- v0.0.2：删除部分无用属性，重新调整PageControl
